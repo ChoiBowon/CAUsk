@@ -1,0 +1,42 @@
+.wrap {
+    width:504px;
+    height:250px;
+    border:1px;
+    solid red;
+    position:absolute;
+    left:50%;
+    top: 50%;
+    margin: -140px 0 0 -292px;
+    padding:22px 40px 8px;
+}
+
+fieldset {
+    border: 1px solid #ccc
+}
+
+
+
+.aligned label {
+    width: 170px;
+    display: block;
+    padding: 3px 10px 0 0;
+    float: left;
+}
+
+.form-row{
+    padding: 10px;
+    font-size: 11px;
+    border-bottom : 1px solid #eee;
+}
+
+.submit-row{
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    text-align:right;
+}
+
+.submit-row input {
+    margin: 10px;
+    background: #ffc;
+}
+
