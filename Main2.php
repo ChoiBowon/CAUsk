@@ -26,9 +26,8 @@ session_start();
       <!-- <li class="active" ><a href="#" style="font-size:20px; text-align:center; color:#FFFF; background-color:#5DA4BE;">Link </a></li> -->
         <!-- <li><a href="" disabled style="font-size:20px; text-align:center; color:#FFFF">{{ request.user.username }}님</a></li> -->
         <li><a href="#logout" style="font-size:20px; text-align:center; color:#FFFF">Logout</a></li>
-        <li><a href="Login.php" style="font-size:20px; text-align:center; color:#FFFF">Login</a></li>
         <?php
-        echo "<li><a href='#' style='font-size:20px; text-align:center; color:#FFFF'>" .$_SESSION['userId'].'님'."</a></li>";
+        echo "<li><a href='#' style='font-size:20px; text-align:center; color:#FFFF'>" .$_SESSION['store_name'].'님'."</a></li>";
          ?>
         <li><a href="SignUp.php" style="font-size:20px; text-align:center; color:#FFFF">Signup</a></li>
     </ul>

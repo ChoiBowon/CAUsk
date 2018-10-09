@@ -17,7 +17,7 @@ $row = mysqli_fetch_assoc( $result );
       //  session_write_close();
        //session_register("userId");
        $_SESSION['userId']=$userId;
-       $_SESSION['name']=$row['name'];
+       $_SESSION['store_name']=$row['store_name'];
       //  $_SESSION['role']=$role;
 
        header("location: Main2.php"); //로그인 성공 시 Main2_Logout.php 로 이동
