@@ -55,12 +55,12 @@
                 </div>
                 <div class="form-group">
                   <label for="username">가게 이름</label>
-                  <input type="text" class="form-control" name="Store_Name" style="color:#000" placeholder="이름을 입력해 주세요">
+                  <input type="text" class="form-control" name="Store_Name" style="color:#000" placeholder="가게 이름을 입력해 주세요 ex) 스타벅스 서현점">
                 </div>
 
                 <div class="form-group">
                   <label for="username">지점</label>
-                  <input type="text" class="form-control" name="Place" style="color:#000" placeholder="지점 위치를 입력해 주세요 ex) 홍대점">
+                  <input type="text" class="form-control" name="Place" style="color:#000" placeholder="지점 위치를 입력해 주세요 ex) 분당구 서현동">
                 </div>
 
     			      <div class="form-group">

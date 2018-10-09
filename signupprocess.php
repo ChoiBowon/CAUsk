@@ -12,7 +12,7 @@ require_once("connect.php");
  //PHP에서 유효성 재확인
 
  //아이디 중복검사.
- $sql = "SELECT * FROM member WHERE id = '{$memberId}'";
+ $sql = "SELECT * FROM store WHERE id = '{$memberId}'";
  $res = $conn->query($sql);
  if($res->num_rows >= 1){
    echo ("<script>alert('이미 존재하는 아이디가 있습니다.');history.go(-1);</script>");
@@ -42,7 +42,7 @@ exit;
  }
 
 
- $sql="INSERT INTO user (id,password,store_name,place,phonenumber) VALUES('".$_POST['Id']."','".$_POST['Password']."','".$_POST['Store_Name']."','".$_POST['Place']."','".$_POST['PhoneNum']."')";
+ $sql="INSERT INTO store (id,password,storeName,place,tel) VALUES('".$_POST['Id']."','".$_POST['Password']."','".$_POST['Store_Name']."','".$_POST['Place']."','".$_POST['PhoneNum']."')";
 
    $result=mysqli_query($conn, $sql);
 

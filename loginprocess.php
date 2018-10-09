@@ -5,7 +5,7 @@ require_once("connect.php");
     $userId = $_POST['userID'];
     $pass = $_POST['password'];
 
- $sql="SELECT id, store_name FROM user WHERE id='$userId' and password='$pass'";
+ $sql="SELECT id, storeName FROM store WHERE id='$userId' and password='$pass'";
  $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc( $result );
 
@@ -17,7 +17,7 @@ $row = mysqli_fetch_assoc( $result );
       //  session_write_close();
        //session_register("userId");
        $_SESSION['userId']=$userId;
-       $_SESSION['store_name']=$row['store_name'];
+       $_SESSION['storeName']=$row['storeName'];
       //  $_SESSION['role']=$role;
 
        header("location: Main2.php"); //로그인 성공 시 Main2_Logout.php 로 이동
