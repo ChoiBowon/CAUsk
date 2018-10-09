@@ -20,7 +20,7 @@ $row = mysqli_fetch_assoc( $result );
        $_SESSION['name']=$row['name'];
       //  $_SESSION['role']=$role;
 
-       header("location: Main.php"); //로그인 성공 시 Main2_Logout.php 로 이동
+       header("location: Main2.php"); //로그인 성공 시 Main2_Logout.php 로 이동
    }
    else
    {
