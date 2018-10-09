@@ -11,7 +11,7 @@
 <div class="container-fluid" >
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header" style="margin-top:15px;" >
-    <a class="navbar-brand" href="#" style="font-size:40px; text-align:center; color:#FFFF">CAUsk</a>
+    <a class="navbar-brand" href="Main.php" style="font-size:40px; text-align:center; color:#FFFF">CAUsk</a>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
