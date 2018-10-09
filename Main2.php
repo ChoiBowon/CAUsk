@@ -1,6 +1,6 @@
 <?php
 require_once("connect.php");
-// $result = mysqli_query($conn,'SELECT*FROM post');
+$result = mysqli_query($conn,'SELECT*FROM menu');
 session_start();
  ?>
 <!DOCTYPE html>
@@ -10,6 +10,8 @@ session_start();
     <title>사장님 사이트</title>
     <link rel="stylesheet" href="bootstrap.css">
     <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
+
+
 </head>
 <body>
   <nav class="navbar navbar-default" style="background-color : #5DA4BE; height:80px;">

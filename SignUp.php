@@ -55,37 +55,20 @@
                 </div>
                 <div class="form-group">
                   <label for="username">가게 이름</label>
-                  <input type="text" class="form-control" name="Store_Name" style="color:#000" placeholder="가게 이름을 입력해 주세요 ex) 스타벅스 서현점">
+                  <input type="text" class="form-control" name="Store_Name" style="color:#000" placeholder="ex) 스타벅스 서현점">
                 </div>
 
                 <div class="form-group">
                   <label for="username">지점</label>
-                  <input type="text" class="form-control" name="Place" style="color:#000" placeholder="지점 위치를 입력해 주세요 ex) 분당구 서현동">
+                  <input type="text" class="form-control" name="Place" style="color:#000" placeholder="ex) 분당구 서현동">
                 </div>
 
     			      <div class="form-group">
                   <label for="InputEmail">전화번호</label>
-                  <input type="text" class="form-control" name="PhoneNum" style="color:#000" placeholder="전화번호를 입력해 주세요">
+                  <input type="text" class="form-control" name="PhoneNum" style="color:#000" placeholder="ex) 01024559090">
                 </div>
 <!--
-                <div class="form-group">
-                  <label for="InputEmail">이메일 주소</label>
-                  <input type="email" class="form-control" name="Email" style="color:#000" placeholder="이메일 주소를 입력해 주세요">
-                </div> -->
 
-                <!-- <div class="form-group">
-                  <label for="InputDept">소속기관/학교명</label>
-                  <input type="text" class="form-control" name="Department" style="color:#000" placeholder="소속기관/학교를 입력해 주세요">
-                </div> -->
-
-                <!-- <div class="form-group">
-                  <label for="InputYear">직급/학년</label>
-                  <input type="text" class="form-control" name="Year" style="color:#000" placeholder="직급/학년을 입력해 주세요">
-                </div> -->
-                <!-- <div class="form-group">
-                  <label for="InputMajor">학과/전공</label>
-                  <input type="text" class="form-control" name="Major" style="color:#000" placeholder="학과/전공을 입력해 주세요">
-                </div> -->
                 <div class="form-group text-center">
                   <button type="submit" class="btn btn-info">회원가입<i class="fa fa-check spaceLeft"></i></button>
                   <button type="submit" class="btn btn-warning">가입취소<i class="fa fa-times spaceLeft"></i></button>

@@ -21,23 +21,23 @@ require_once("connect.php");
 
  //비밀번호 일치하는지 확인
  if($memberPw !== $memberPw2){
-   echo ("<script>alert('일치하는 비밀번호가 없습니다.');history.go(-1);</script>");
+   echo ("<script>alert('비밀번호가 일치하지 않습니다..');history.go(-1);</script>");
      exit;
  }
 
  //이름이 빈 값이 아닌지
  if($memberStoreName == ''){
-     echo ("<script>alert('이름의 값이 없습니다.');history.go(-1);</script>");
+     echo ("<script>alert('가게 이름을 입력해주세요.');history.go(-1);</script>");
 exit;
  }
  //역할(멘토/멘티)이 빈값이 아닌지
  if($memberPlace == ''){
-     echo ("<script>alert('멘토/멘티의 값이 없습니다.');history.go(-1);</script>");
+     echo ("<script>alert('지점 위치를 입력해주세요.');history.go(-1);</script>");
 exit;
  }
  //전화번호가 빈값이 아닌지
  if($memberPhoneNum == ''){
-     echo ("<script>alert('전화번호의 값이 없습니다.');history.go(-1);</script>");
+     echo ("<script>alert('전화번호를 입력해주세요.');history.go(-1);</script>");
 exit;
  }
 
@@ -46,12 +46,12 @@ exit;
 
    $result=mysqli_query($conn, $sql);
 
-   echo ("<script>alert('회원가입이 완료되었습니다.');history.go(-2);</script>");
+   echo ("<script>alert('회원가입이 완료되었습니다.로그인 페이지로 이동합니다.');history.go(-2);</script>");
   exit;
 
 //////////////////////////////////////////회원가입 끝////////////////////////////////////////////////
 
-   header("Location:Main.php");
+   header("Location:Login.php");
 
 
  ?>
