@@ -67,7 +67,7 @@
                   <label for="InputEmail">전화번호</label>
                   <input type="text" class="form-control" name="PhoneNum" style="color:#000" placeholder="ex) 01024559090">
                 </div>
-<!--
+
 
                 <div class="form-group text-center">
                   <button type="submit" class="btn btn-info">회원가입<i class="fa fa-check spaceLeft"></i></button>
