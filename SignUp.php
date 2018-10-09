@@ -35,7 +35,7 @@
     </div>
         <div class="row">
           <div class="col-md-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <form class="join" action="SignUpprocess.php" method="post">
+            <form class="join" action="signupprocess.php" method="post">
 
             <div class="col-md-6 col-md-offset-3">
 
@@ -55,18 +55,13 @@
                 </div>
                 <div class="form-group">
                   <label for="username">가게 이름</label>
-                  <input type="text" class="form-control" name="Name" style="color:#000" placeholder="이름을 입력해 주세요">
+                  <input type="text" class="form-control" name="Store_Name" style="color:#000" placeholder="이름을 입력해 주세요">
                 </div>
 
                 <div class="form-group">
                   <label for="username">지점</label>
                   <input type="text" class="form-control" name="Place" style="color:#000" placeholder="지점 위치를 입력해 주세요 ex) 홍대점">
                 </div>
-                <!-- <div class="form-group">
-                  <label for="role">멘토/멘티 구분</label>
-                    <input type="radio" name="Role" value="mentor">멘토
-                    <input type="radio" name="Role" value="mentee">멘티
-                </div> -->
 
     			      <div class="form-group">
                   <label for="InputEmail">전화번호</label>
