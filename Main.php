@@ -1,7 +1,6 @@
 <?php
 require_once("connect.php");
 // $result = mysqli_query($conn,'SELECT*FROM post');
-
  ?>
 <!DOCTYPE html>
 <html lang="en">

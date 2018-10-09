@@ -5,7 +5,7 @@ require_once("connect.php");
     $userId = $_POST['userID'];
     $pass = $_POST['password'];
 
- $sql="SELECT id, name FROM member WHERE id='$userId' and password='$pass'";
+ $sql="SELECT id, store_name FROM user WHERE id='$userId' and password='$pass'";
  $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc( $result );
 
@@ -20,7 +20,7 @@ $row = mysqli_fetch_assoc( $result );
        $_SESSION['name']=$row['name'];
       //  $_SESSION['role']=$role;
 
-       header("location: Main2_Logout.php"); //로그인 성공 시 Main2_Logout.php 로 이동
+       header("location: Main.php"); //로그인 성공 시 Main2_Logout.php 로 이동
    }
    else
    {
