@@ -13,11 +13,12 @@ require_once("connect.php");
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="dialog.css">
-    <script src="js/dialog.js"></script>
 
 
 </head>
 <body>
+  <script type="text/javascript" src="js/dialog.js"></script>
+
   <!-- nav -->
   <nav class="navbar navbar-default" style="background-color : #5DA4BE; height:80px;">
     <div class="container-fluid" >
