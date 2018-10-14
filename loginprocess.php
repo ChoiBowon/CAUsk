@@ -8,8 +8,6 @@ require_once("connect.php");
     $sql="SELECT id, storeName FROM store WHERE id='$userId' and AES_DECRYPT(UNHEX(password), MD5('$pass'))";
 
  // $sql="SELECT id, storeName FROM store WHERE id='$userId' and password='$pass'";
- // SELECT * FROM User WHERE userId = 'lovelgw' AND AES_DECRYPT(UNHEX(passWd), MD5('123456'));
- // $sql="INSERT INTO store (id,password,storeName,place,tel) VALUES('".$_POST['Id']."',HEX(AES_ENCRYPT('".$_POST['Password']."', MD5('".$_POST['Password']."'))),'".$_POST['Store_Name']."','".$_POST['Place']."','".$_POST['PhoneNum']."')";
 
  $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc( $result );
@@ -22,7 +20,9 @@ $row = mysqli_fetch_assoc( $result );
       //  session_write_close();
        //session_register("userId");
        $_SESSION['userId']=$userId;
-       $_SESSION['storeName']=$row['storeName'];
+      //  $_SESSION['storeName']=$row['storeName'];
+       $_SESSION['storeName']=$storeName;
+
       //  $_SESSION['role']=$role;
 
        header("location: Main2.php"); //로그인 성공 시 Main2_Logout.php 로 이동
