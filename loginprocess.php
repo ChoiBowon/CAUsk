@@ -20,8 +20,8 @@ $row = mysqli_fetch_assoc( $result );
       //  session_write_close();
        //session_register("userId");
        $_SESSION['userId']=$userId;
-      //  $_SESSION['storeName']=$row['storeName'];
-       $_SESSION['storeName']=$storeName;
+       $_SESSION['storeName']=$row['storeName'];
+      //  $_SESSION['storeName']=$storeName;
 
       //  $_SESSION['role']=$role;
 
