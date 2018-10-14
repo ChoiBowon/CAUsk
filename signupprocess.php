@@ -21,16 +21,16 @@ require_once("connect.php");
 
  //비밀번호 일치하는지 확인
  if($memberPw !== $memberPw2){
-   echo ("<script>alert('비밀번호가 일치하지 않습니다..');history.go(-1);</script>");
+   echo ("<script>alert('비밀번호가 일치하지 않습니다.');history.go(-1);</script>");
      exit;
  }
 
- //이름이 빈 값이 아닌지
+ //가게 이름이 빈 값이 아닌지
  if($memberStoreName == ''){
      echo ("<script>alert('가게 이름을 입력해주세요.');history.go(-1);</script>");
 exit;
  }
- //역할(멘토/멘티)이 빈값이 아닌지
+ //지점 이름이 빈값이 아닌지
  if($memberPlace == ''){
      echo ("<script>alert('지점 위치를 입력해주세요.');history.go(-1);</script>");
 exit;
@@ -42,7 +42,8 @@ exit;
  }
 
 
- $sql="INSERT INTO store (id,password,storeName,place,tel) VALUES('".$_POST['Id']."','".$_POST['Password']."','".$_POST['Store_Name']."','".$_POST['Place']."','".$_POST['PhoneNum']."')";
+ // $sql="INSERT INTO store (id,password,storeName,place,tel) VALUES('".$_POST['Id']."','".$_POST['Password']."','".$_POST['Store_Name']."','".$_POST['Place']."','".$_POST['PhoneNum']."')";
+ $sql="INSERT INTO store (id,password,storeName,place,tel) VALUES('".$_POST['Id']."','HEX(AES_ENCRYPT(".$_POST['Password'].", MD5(".$_POST['Password'].")))','".$_POST['Store_Name']."','".$_POST['Place']."','".$_POST['PhoneNum']."')";
 
    $result=mysqli_query($conn, $sql);
 

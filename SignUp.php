@@ -74,7 +74,8 @@
                   <button type="submit" class="btn btn-warning">가입취소<i class="fa fa-times spaceLeft"></i></button>
                 </div>
             </div>
-          </form></div>
+          </form>
+        </div>
         </div>
 
 

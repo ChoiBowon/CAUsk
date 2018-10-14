@@ -47,36 +47,6 @@ require_once("connect.php");
         <h1 class="section-title wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms" style="font-family: 'Do Hyeon', sans-serif;">주문 현황</h1>
     </div>
 
-    <button type="button" id="myBtn" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-
-
-    <!-- Modal -->
-    <div id="myModal" class="dialog" tabindex="-1" role="dialog" aria-hidden="true">
-    <!-- <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 dialog-content" style="background: #fbfbfb; box-shadow: 5px 5px grey">
-        <div>
-          dfdfd
-        </div>
-        <니 코드 >
-    </div> -->
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">메뉴 추가</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-</div>
-
 
   <!-- 메뉴판 -->
     <div class="section-header">
@@ -133,8 +103,52 @@ require_once("connect.php");
 
         <div class="row-md-6" >
             <p style="position:right">
-                <a href="#exampleModalCenter" data-toggle="modal" style="font-family: 'Do Hyeon', sans-serif; font-size:20px; margin-left: 1060px;" >메뉴 수정</a>
+                <a href="#myModal" id="myBtn" data-toggle="modal" data-target="#myModal" style="font-family: 'Do Hyeon', sans-serif; font-size:20px; margin-left: 1060px;" >메뉴 수정</a>
+                <!-- <button type="button" id="myBtn" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">메뉴 추가</button> -->
             </p>
+            <!-- Modal -->
+            <div id="myModal" class="dialog" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 dialog-content" style="background: #fbfbfb; box-shadow: 5px 5px grey">
+                <div class="dialog-header">
+                  <h2 class="dialog-title" id="ModalLongTitle">메뉴를 추가해주세요.</h2>
+                  <button type="button" id="close" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="dialog-body">
+                  <form class="join" action="#" method="post">
+
+                      <div class="form-group">
+                      <label for="InputCategory">Category</label>
+                      <input type="text" class="form-control" name="Category" style="color:#000" placeholder="Category">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="InputMenu">메뉴이름</label>
+                        <input type="text" class="form-control" name="MenuName" style="color:#000" placeholder="ex) 아메리카노">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="InputSize">size</label>
+                        <input type="text" class="form-control" name="Size" style="color:#000" placeholder="필터링으로 할 예정">
+                      </div>
+                      <div class="form-group">
+                        <label for="InputHotIce">hot/ice</label>
+                        <input type="text" class="form-control" name="HOTICE" style="color:#000" placeholder="필터링으로 할 예정">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="InputPrice">가격</label>
+                        <input type="text" class="form-control" name="Price" style="color:#000" placeholder="ex) 5000">
+                      </div>
+
+                </form>
+                </div>
+                <div class="dialog-footer">
+                  <button type="button" class="btn btn-primary">저장하기</button>
+                </div>
+            </div>
+        </div>
         </div>
 
 </div>

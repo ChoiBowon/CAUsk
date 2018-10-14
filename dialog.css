@@ -14,12 +14,36 @@
 /* Modal Content/Box */
 .dialog-content {
     background-color: #fefefe;
-    margin: 10% auto; /* 15% from the top and centered */
+    margin: 5% 25% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
+    border-radius: 5px;
     width: 50%; /* Could be more or less, depending on screen size */
 }
+.dialog-title {
+  margin: 0;
+  line-height: 1.42857143;
+}
+.dialog-header {
+  min-height: 16.42857143px;
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
 
+.dialog-header .close {
+  margin-top: -40px;
+}
+
+.dialog-body {
+  position: relative;
+  padding: 15px;
+}
+
+.dialog-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
 .visible{
     display: block;
 }
