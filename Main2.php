@@ -23,7 +23,7 @@ session_start();
     <div class="container-fluid" >
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header" style="margin-top:15px;" >
-    <a class="navbar-brand" href="Main.php" style="font-size:40px; text-align:center; color:#FFFF">CAUsk</a>
+    <a class="navbar-brand" href="Main2.php" style="font-size:40px; text-align:center; color:#FFFF">CAUsk</a>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
@@ -34,7 +34,7 @@ session_start();
         <!-- <li><a href="" disabled style="font-size:20px; text-align:center; color:#FFFF">{{ request.user.username }}님</a></li> -->
         <li><a href="logoutprocess.php" style="font-size:20px; text-align:center; color:#FFFF">Logout</a></li>
         <?php
-        echo "<li><a href='#' style='font-size:20px; text-align:center; color:#FFFF'>" .$_SESSION['storeName'].'점'."</a></li>";
+        echo "<li><a href='#' style='font-size:20px; text-align:center; color:#FFFF'>" .$_SESSION['storeName']."</a></li>";
          ?>
         <!-- <li><a href="SignUp.php" style="font-size:20px; text-align:center; color:#FFFF">Signup</a></li> -->
     </ul>
