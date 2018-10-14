@@ -29,7 +29,7 @@ session_start();
         <!-- <li><a href="" disabled style="font-size:20px; text-align:center; color:#FFFF">{{ request.user.username }}님</a></li> -->
         <li><a href="logoutprocess.php" style="font-size:20px; text-align:center; color:#FFFF">Logout</a></li>
         <?php
-        echo "<li><a href='#' style='font-size:20px; text-align:center; color:#FFFF'>" .$_SESSION['store_name'].'님'."</a></li>";
+        echo "<li><a href='#' style='font-size:20px; text-align:center; color:#FFFF'>" .$_SESSION['storeName'].'님'."</a></li>";
          ?>
         <li><a href="SignUp.php" style="font-size:20px; text-align:center; color:#FFFF">Signup</a></li>
     </ul>
