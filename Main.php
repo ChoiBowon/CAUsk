@@ -12,12 +12,12 @@ require_once("connect.php");
     <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="dialog.css">
+    <link rel="stylesheet" href="dialog.css?v=1">
 
 
 </head>
 <body>
-  <script type="text/javascript" src="js/dialog.js"></script>
+  <script type="text/javascript" src="js/dialog.js?v=1"></script>
 
   <!-- nav -->
   <nav class="navbar navbar-default" style="background-color : #5DA4BE; height:80px;">
