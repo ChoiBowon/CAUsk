@@ -5,7 +5,7 @@ require_once("connect.php");
     $userId = $_POST['userID'];
     $pass = $_POST['password'];
 
-    $sql="SELECT id, storeName FROM store WHERE id='$userId' and password=AES_DECRYPT(UNHEX($pass), MD5('".$_POST['password']."'))";
+    $sql="SELECT id, storeName FROM store WHERE id='$userId' and password=AES_DECRYPT(UNHEX($pass), MD5('".$_POST['Password']."'))";
 
  // $sql="SELECT id, storeName FROM store WHERE id='$userId' and password='$pass'";
  // SELECT * FROM User WHERE userId = 'lovelgw' AND AES_DECRYPT(UNHEX(passWd), MD5('123456'));
