@@ -54,12 +54,12 @@
                   <input type="password" class="form-control" name="Password2" style="color:#000" placeholder="비밀번호 확인">
                 </div>
                 <div class="form-group">
-                  <label for="username">가게 이름</label>
+                  <label for="username">가게 이름 및 지점</label>
                   <input type="text" class="form-control" name="Store_Name" style="color:#000" placeholder="ex) 스타벅스 서현점">
                 </div>
 
                 <div class="form-group">
-                  <label for="username">지점</label>
+                  <label for="username">위치</label>
                   <input type="text" class="form-control" name="Place" style="color:#000" placeholder="ex) 분당구 서현동">
                 </div>
 
