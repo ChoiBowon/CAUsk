@@ -43,11 +43,11 @@ exit;
 
 
  // $sql="INSERT INTO store (id,password,storeName,place,tel) VALUES('".$_POST['Id']."','".$_POST['Password']."','".$_POST['Store_Name']."','".$_POST['Place']."','".$_POST['PhoneNum']."')";
- $sql="INSERT INTO store (id,password,storeName,place,tel) VALUES('".$_POST['Id']."','HEX(AES_ENCRYPT(".$_POST['Password'].", MD5(".$_POST['Password'].")))','".$_POST['Store_Name']."','".$_POST['Place']."','".$_POST['PhoneNum']."')";
+ $sql="INSERT INTO store (id,password,storeName,place,tel) VALUES('".$_POST['Id']."',HEX(AES_ENCRYPT(".$_POST['Password'].", MD5(".$_POST['Password']."))),'".$_POST['Store_Name']."','".$_POST['Place']."','".$_POST['PhoneNum']."')";
 
    $result=mysqli_query($conn, $sql);
 
-   echo ("<script>alert('회원가입이 완료되었습니다.로그인 페이지로 이동합니다.');history.go(-2);</script>");
+   echo ("<script>alert('회원가입이 완료었습니다.로그인 페이지로 이동합니다.');history.go(-1);</script>");
   exit;
 
 //////////////////////////////////////////회원가입 끝////////////////////////////////////////////////
