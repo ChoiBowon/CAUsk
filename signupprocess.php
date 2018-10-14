@@ -43,7 +43,7 @@ exit;
 
 
  // $sql="INSERT INTO store (id,password,storeName,place,tel) VALUES('".$_POST['Id']."','".$_POST['Password']."','".$_POST['Store_Name']."','".$_POST['Place']."','".$_POST['PhoneNum']."')";
- $sql="INSERT INTO store (id,password,storeName,place,tel) VALUES('".$_POST['Id']."',HEX(AES_ENCRYPT(".$_POST['Password'].", "secret")),'".$_POST['Store_Name']."','".$_POST['Place']."','".$_POST['PhoneNum']."')";
+ $sql="INSERT INTO store (id,password,storeName,place,tel) VALUES('".$_POST['Id']."',HEX(AES_ENCRYPT('".$_POST['Password']."', 'MD5('".$_POST['Password']."')')),'".$_POST['Store_Name']."','".$_POST['Place']."','".$_POST['PhoneNum']."')";
 
    $result=mysqli_query($conn, $sql);
 
