@@ -5,7 +5,12 @@ require_once("connect.php");
     $userId = $_POST['userID'];
     $pass = $_POST['password'];
 
- $sql="SELECT id, storeName FROM store WHERE id='$userId' and password='$pass'";
+    $sql="SELECT id, storeName FROM store WHERE id='$userId' and password='AES_DECRYPT(UNHEX($pass), MD5('".$_POST['Password']."'))'";
+
+ // $sql="SELECT id, storeName FROM store WHERE id='$userId' and password='$pass'";
+ // SELECT * FROM User WHERE userId = 'lovelgw' AND AES_DECRYPT(UNHEX(passWd), MD5('123456'));
+ // $sql="INSERT INTO store (id,password,storeName,place,tel) VALUES('".$_POST['Id']."',HEX(AES_ENCRYPT('".$_POST['Password']."', MD5('".$_POST['Password']."'))),'".$_POST['Store_Name']."','".$_POST['Place']."','".$_POST['PhoneNum']."')";
+
  $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc( $result );
 
