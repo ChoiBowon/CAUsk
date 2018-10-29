@@ -18,8 +18,7 @@ session_start();
  //     exit;
  // }
 
-
-
+console.log(".$_POST['CategoryDirect'].");
  $sql="INSERT INTO menu (storeSerial,category,menuName,size,hotIce,price) VALUES('".$_SESSION['storeSerial']."','".$_POST['CategoryDirect']."','".$_POST['MenuName']."','".$_POST['SizeDirect']."','".$_POST['hotDirect']."','".$_POST['Price']."')";
 
    $result=mysqli_query($conn, $sql);
