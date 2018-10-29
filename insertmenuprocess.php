@@ -10,6 +10,7 @@ require_once("connect.php");
 
 
  $sql = "SELECT storeSerial FROM store WHERE id = '$_SESSION['userId']'";
+ echo ("<script>alert('들어옴.')</script>");
  $res = $conn->query($sql);
  if($res->num_rows >= 1){
    echo ("<script>alert('이미 존재하는 아이디가 있습니다.');history.go(-1);</script>");

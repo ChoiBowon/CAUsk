@@ -174,7 +174,7 @@ session_start();
                 <span aria-hidden="true">&times;</span>
               </button> -->
                <div class="form-group text-center">
-                 <button type="submit" id="submit" class="btn btn-default" >저장</button>
+                 <button type="submit" id="submit" class="btn btn-default" >메뉴 저장</button>
               </div>
               <!-- <button type="button" id="close" class="close">저장하기</button> -->
 
