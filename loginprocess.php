@@ -21,7 +21,7 @@ $row = mysqli_fetch_assoc( $result );
        //session_register("userId");
        $_SESSION['userId']=$userId;
        $_SESSION['storeName']=$row['storeName'];
-      //  $_SESSION['storeName']=$storeName;
+       $_SESSION['storeSerial']=$row['storeSerial'];
 
       //  $_SESSION['role']=$role;
 
