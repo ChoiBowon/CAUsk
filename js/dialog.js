@@ -26,7 +26,7 @@ function categoryDirect(){
     document.join.CategoryDirect.disabled = true;
     document.join.CategoryDirect.value = document.join.category_selbox.options[document.join.category_selbox.selectedIndex].value;
   }
-  console.log(document.join.CategoryDirect.value);
+  console.log(CategoryDirect.value);
 }
 
 function sizeDirect(){
