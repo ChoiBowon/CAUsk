@@ -2,10 +2,10 @@
 require_once("connect.php");
 session_start();
 
- $Category = $_POST['Category'];
+ $Category = $_POST['CategoryDirect'];
  $MenuName = $_POST['MenuName'];
- $Size = $_POST['Size'];
- $HotIce = $_POST['HOTICE'];
+ $Size = $_POST['SizeDirect'];
+ $HotIce = $_POST['hotDirect'];
  $Price = $_POST['Price'];
 
 
@@ -20,7 +20,7 @@ session_start();
 
 
 
- $sql="INSERT INTO menu (storeSerial,category,menuName,size,hotIce,price) VALUES('".$_SESSION['storeSerial']."','".$_POST['Category']."','".$_POST['MenuName']."','".$_POST['Size']."','".$_POST['HOTICE']."','".$_POST['Price']."')";
+ $sql="INSERT INTO menu (storeSerial,category,menuName,size,hotIce,price) VALUES('".$_SESSION['storeSerial']."','".$_POST['CategoryDirect']."','".$_POST['MenuName']."','".$_POST['SizeDirect']."','".$_POST['hotDirect']."','".$_POST['Price']."')";
 
    $result=mysqli_query($conn, $sql);
 

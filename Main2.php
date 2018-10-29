@@ -18,7 +18,7 @@ session_start();
 
 </head>
 <body>
-  <script type="text/javascript" src="js/dialog.js?v=2"></script>
+  <script type="text/javascript" src="js/dialog.js?v=3"></script>
 
     <!-- nav -->
   <nav class="navbar navbar-default" style="background-color : #5DA4BE; height:80px;">
@@ -119,52 +119,87 @@ session_start();
               </button>
             </div>
             <div class="dialog-body">
-              <form class="join" action="insertmenuprocess.php" method="post">
+              <form class="join" name="join" action="insertmenuprocess.php" method="post">
 
                   <div class="form-group">
                   <label for="InputCategory">Category</label>
                   <div class="row">
-                    <div class="col-xs-6 col-sm-6 col-md-6">
-                      <input type="text" class="form-control" name="Category" style="color:#000" placeholder="Category">
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                      <select name="category_selbox" onchange="categoryDirect()">
+                        <option value="none">선택</option>
+                        <option value="커피">커피</option>
+                        <option value="콜드브루">콜드브루</option>
+                        <option value="direct">직접 입력</option>
+                      </select>
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-md-6">
-                      <div class="dropdown" id="mydropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                          Dropdown
-                          <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-                        </ul>
-                      </div>
-
-
+                    <div class="col-xs-9 col-sm-9 col-md-9">
+                      <input type="text" value="" disabled id="selboxDirect" class="form-control" name="CategoryDirect" style="color:#000" placeholder="Category">
                     </div>
-
-
                   </div>
                 </div>
 
                   <div class="form-group">
-                    <label for="InputMenu">메뉴이름</label>
-                    <input type="text" class="form-control" name="MenuName" style="color:#000" placeholder="ex) 아메리카노">
+                    <div class="row">
+                      <div class="col-xs-3 col-sm-3 col-md-3">
+                          <label for="InputMenu">메뉴이름</label>
+                      </div>
+                      <div class="col-xs-9 col-sm-9 col-md-9">
+                        <input type="text" class="form-control" name="MenuName" style="color:#000" placeholder="ex) 아메리카노">
+
+                      </div>
+                    </div>
+
                   </div>
 
                   <div class="form-group">
                     <label for="InputSize">size</label>
-                    <input type="text" class="form-control" name="Size" style="color:#000" placeholder="필터링으로 할 예정">
-                  </div>
-                  <div class="form-group">
-                    <label for="InputHotIce">hot/ice</label>
-                    <input type="text" class="form-control" name="HOTICE" style="color:#000" placeholder="필터링으로 할 예정">
+                    <div class="row">
+                      <div class="col-xs-3 col-sm-3 col-md-3">
+                        <select name="size_selbox" onchange="sizeDirect()">
+                          <option value="none">선택</option>
+                          <option value="tall">Tall</option>
+                          <option value="grande">Grande</option>
+                          <option value="direct">직접 입력</option>
+                        </select>
+                      </div>
+                      <div class="col-xs-9 col-sm-9 col-md-9">
+                        <input type="text" value="" disabled id="selboxDirect" class="form-control" name="SizeDirect" style="color:#000" placeholder="Size">
+                      </div>
+                    </div>
                   </div>
 
                   <div class="form-group">
-                    <label for="InputPrice">가격</label>
-                    <input type="text" class="form-control" name="Price" style="color:#000" placeholder="ex) 5000원">
+                    <label for="InputHotIce">hot / ice</label>
+                    <div class="row">
+                      <div class="col-xs-3 col-sm-3 col-md-3">
+                        <select name="hot_selbox" onchange="hot()">
+                          <option value="none">선택</option>
+                          <option value="hot">Hot only</option>
+                          <option value="ice">Ice only</option>
+                          <option value="hot and ice">둘 다</option>
+                          <option value="선택 안함">선택 안함</option>
+                        </select>
+                      </div>
+                      <div class="col-xs-9 col-sm-9 col-md-9">
+                        <input type="text" value="" disabled id="selboxDirect" class="form-control" name="hotDirect" style="color:#000" placeholder="Hot or Ice">
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-xs-3 col-sm-3 col-md-3">
+                        <label for="InputPrice">가격</label>
+                      </div>
+                      <div class="col-xs-6 col-sm-6 col-md-6">
+                        <input type="text" class="form-control" name="Price" style="color:#000" placeholder="ex) 5000">
+                      </div>
+                      <div class="col-xs-3 col-sm-3 col-md-3">
+                        <label for="InputPrice">원</label>
+                      </div>
+                    </div>
+
                   </div>
 
 

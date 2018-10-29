@@ -17,9 +17,42 @@ function closeMenuListener(evt) {
     showChart(false);
 }
 
+function categoryDirect(){
+  if(document.join.category_selbox.value == 'direct'){
+    document.join.CategoryDirect.disabled = false;
+    document.join.CategoryDirect.value = "";
+    document.join.CategoryDirect.focus();
+  }else{
+    document.join.CategoryDirect.disabled = true;
+    document.join.CategoryDirect.value = document.join.category_selbox.options[document.join.category_selbox.selectedIndex].value;
+  }
+}
+
+function sizeDirect(){
+  console.log("들어옴");
+  if(document.join.size_selbox.value == 'direct'){
+    document.join.SizeDirect.disabled = false;
+    document.join.SizeDirect.value = "";
+    document.join.SizeDirect.focus();
+  }else{
+    document.join.SizeDirect.disabled = true;
+    document.join.SizeDirect.value = document.join.size_selbox.options[document.join.size_selbox.selectedIndex].value;
+  }
+}
+
+function hot(){
+  document.join.hotDirect.disabled = true;
+  //console.log(document.join.hot_selbox.options[document.join.hot_selbox.selectedIndex].value);
+  document.join.hotDirect.value = document.join.hot_selbox.options[document.join.hot_selbox.selectedIndex].value;
+  //console.log("Hello world");
+}
+
+
 document.addEventListener("DOMContentLoaded", function() {
   showChart(false);
   $("#myBtn").addEventListener("click", addMenuListener);
   $("#close").addEventListener("click", closeMenuListener);
   $("#submit").addEventListener("click", closeMenuListener);
+
+
 })
