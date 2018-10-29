@@ -2,16 +2,18 @@
 require_once("connect.php");
 session_start();
 
- $Category = $_POST['CategoryDirect'];
- $MenuName = $_POST['MenuName'];
- $Size = $_POST['size_selbox'];
+ // $Category = $_POST['category_selbox'];
+ // $MenuName = $_POST['MenuName'];
+ // $Size = $_POST['size_selbox'];
  $HotIce = $_POST['hot_selbox'];
- $Price = $_POST['Price'];
+ // $Price = $_POST['Price'];
 
 echo('<pre>'); print_r($_POST); echo('</pre>');
 
 if ($HotIce == 'hot'){
   $HotIce = 0;
+}elseif ($HotIce == 'ice') {
+  $HotIce = 1;
 }
 echo('$HotIce');
 
