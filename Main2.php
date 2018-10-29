@@ -170,13 +170,12 @@ session_start();
             </form>
             </div>
             <div class="dialog-footer">
-              <!-- <button type="button" id="close" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button> -->
-               <div class="form-group text-center">
+               <!-- <div class="form-group text-center">
                  <button type="submit" id="submit" class="btn btn-default" >메뉴 저장</button>
-              </div>
-              <!-- <button type="button" id="close" class="close">저장하기</button> -->
+              </div> -->
+              <div class="form-group text-center">
+                <button type="submit"  class="btn btn-default" >메뉴 저장</button>
+             </div>
 
             </div>
         </div>
