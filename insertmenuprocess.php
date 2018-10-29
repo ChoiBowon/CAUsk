@@ -8,9 +8,8 @@ session_start();
  $HotIce = $_POST['hotDirect'];
  $Price = $_POST['Price'];
 
+echo('<pre>'); print_r($_POST); echo('</pre>');
 
-console.log($_POST['CategoryDirect.value']);
-console.log($_POST['SizeDirect']);
 
  // $sql="INSERT INTO menu (storeSerial,category,menuName,size,hotIce,price) VALUES('".$_SESSION['storeSerial']."','".$_POST['CategoryDirect']."','".$_POST['MenuName']."','".$_POST['SizeDirect']."','".$_POST['hotDirect']."','".$_POST['Price']."')";
  $sql="INSERT INTO menu (storeSerial,category,menuName,size,price) VALUES('".$_SESSION['storeSerial']."','".$_POST['CategoryDirect']."','".$_POST['MenuName']."','".$_POST['SizeDirect']."','".$_POST['Price']."')";
