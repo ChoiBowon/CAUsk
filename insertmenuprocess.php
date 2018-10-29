@@ -7,6 +7,7 @@ require_once("connect.php");
  $HotIce = $_POST['HOTICE'];
  $Price = $_POST['Price'];
 
+ echo ("<script>alert('이미 존재하는 아이디가 있습니다.');history.go(-1);</script>");
 
 
  $sql = "SELECT storeSerial FROM store WHERE id = '$_SESSION['userId']'";
