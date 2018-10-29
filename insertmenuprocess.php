@@ -22,7 +22,7 @@ session_start();
 
 
 
- $sql="INSERT INTO menu (storeSerial,category,menuName,size,hotIce,price) VALUES('13','".$_POST['Category']."','".$_POST['MenuName']."','".$_POST['Size']."','".$_POST['HOTICE']."','".$_POST['Price']."')";
+ $sql="INSERT INTO menu (storeSerial,category,menuName,size,hotIce,price) VALUES('".$_SESSION['storeSerial']"','".$_POST['Category']."','".$_POST['MenuName']."','".$_POST['Size']."','".$_POST['HOTICE']."','".$_POST['Price']."')";
 
    $result=mysqli_query($conn, $sql);
 
