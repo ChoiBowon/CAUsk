@@ -177,7 +177,7 @@ session_start();
                           <option value="hot">Hot only</option>
                           <option value="ice">Ice only</option>
                           <option value="hot and ice">둘 다</option>
-                          <option value="선택 안함">선택 안함</option>
+                          <option value="not choice">선택 안함</option>
                         </select>
                       </div>
                       <div class="col-xs-9 col-sm-9 col-md-9">
