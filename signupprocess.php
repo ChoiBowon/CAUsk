@@ -47,7 +47,7 @@ exit;
 
    $result=mysqli_query($conn, $sql);
 
-   echo ("<script>alert('회원가입이 완료었습니다.로그인 페이지로 이동합니다.');history.go(-2);</script>");
+   echo ("<script>alert('회원가입이 완료었습니다.');history.go(-2);</script>");
   exit;
 
 //////////////////////////////////////////회원가입 끝////////////////////////////////////////////////

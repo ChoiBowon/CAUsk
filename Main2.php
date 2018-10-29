@@ -11,6 +11,8 @@ session_start();
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="bootstrap.css">
     <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" href="dialog.css?v=1">
 
 
@@ -117,12 +119,34 @@ session_start();
               </button>
             </div>
             <div class="dialog-body">
-              <form class="join" action="#" method="post">
+              <form class="join" action="insertmenuprocess.php" method="post">
 
                   <div class="form-group">
                   <label for="InputCategory">Category</label>
-                  <input type="text" class="form-control" name="Category" style="color:#000" placeholder="Category">
+                  <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                      <input type="text" class="form-control" name="Category" style="color:#000" placeholder="Category">
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                      <div class="dropdown" id="mydropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                          Dropdown
+                          <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                        </ul>
+                      </div>
+
+
+                    </div>
+
+
                   </div>
+                </div>
 
                   <div class="form-group">
                     <label for="InputMenu">메뉴이름</label>
@@ -140,7 +164,7 @@ session_start();
 
                   <div class="form-group">
                     <label for="InputPrice">가격</label>
-                    <input type="text" class="form-control" name="Price" style="color:#000" placeholder="ex) 5000">
+                    <input type="text" class="form-control" name="Price" style="color:#000" placeholder="ex) 5000원">
                   </div>
 
             </form>
