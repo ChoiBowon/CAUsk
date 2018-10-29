@@ -167,7 +167,7 @@ session_start();
                     <input type="text" class="form-control" name="Price" style="color:#000" placeholder="ex) 5000원">
                   </div>
 
-            </form>
+
             </div>
             <div class="dialog-footer">
                <!-- <div class="form-group text-center">
@@ -178,6 +178,7 @@ session_start();
              </div>
 
             </div>
+          </form>
         </div>
     </div>
     </div>

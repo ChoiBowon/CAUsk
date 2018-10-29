@@ -12,7 +12,7 @@ session_start();
 
 
  // $sql = "SELECT storeSerial FROM store WHERE id = '$_SESSION['userId']'";
- $res = mysqli_query($conn,'SELECT storeSerial FROM store WHERE id = '$_SESSION['userId']'');
+ // $res = mysqli_query($conn,'SELECT storeSerial FROM store WHERE id = '$_SESSION['userId']'');
 
  // $res = $conn->query($sql);
  // if($res->num_rows >= 1){
