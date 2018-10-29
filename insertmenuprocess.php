@@ -20,7 +20,7 @@ echo('<pre>'); print_r($_POST); echo('</pre>');
   exit;
 
 
-   header("Location:Main2.php");
+  // header("Location:Main2.php");
 
 
  ?>
