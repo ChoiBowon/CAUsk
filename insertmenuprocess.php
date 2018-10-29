@@ -17,7 +17,7 @@ if ($HotIce == 'hot'){
 }elseif ($HotIce == 'ice') {
   $HotIce = 1;
 }
-echo('$HotIce');
+echo($HotIce);
 
  // $sql="INSERT INTO menu (storeSerial,category,menuName,size,hotIce,price) VALUES('".$_SESSION['storeSerial']."','".$_POST['CategoryDirect']."','".$_POST['MenuName']."','".$_POST['SizeDirect']."','".$_POST['hotDirect']."','".$_POST['Price']."')";
  $sql="INSERT INTO menu (storeSerial,category,menuName,size,hotIce,price) VALUES('".$_SESSION['storeSerial']."','".$_POST['category_selbox']."','".$_POST['MenuName']."','".$_POST['size_selbox']."','".$_POST['Price']."')";
