@@ -13,7 +13,7 @@ session_start();
     <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <link rel="stylesheet" href="dialog.css?v=1">
+    <link rel="stylesheet" href="dialog.css?v=2">
 
 
 </head>
