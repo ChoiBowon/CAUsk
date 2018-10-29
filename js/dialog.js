@@ -24,7 +24,9 @@ function categoryDirect(){
     document.join.CategoryDirect.focus();
   }else{
     document.join.CategoryDirect.disabled = true;
-    document.join.CategoryDirect.value = document.join.category_selbox.options[document.join.category_selbox.selectedIndex].value;
+    // document.join.CategoryDirect.value = document.join.category_selbox.options[document.join.category_selbox.selectedIndex].value;
+    document.getElementById('categoryDirect').value = document.join.category_selbox.options[document.join.category_selbox.selectedIndex].value;
+
   }
   console.log(CategoryDirect.value);
 }

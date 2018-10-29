@@ -133,7 +133,7 @@ session_start();
                       </select>
                     </div>
                     <div class="col-xs-9 col-sm-9 col-md-9">
-                      <input type="text" value="" disabled id="selboxDirect" class="form-control" name="CategoryDirect" style="color:#000" placeholder="Category">
+                      <input type="text" value="" disabled id="categoryDirect" class="form-control" name="CategoryDirect" style="color:#000" placeholder="Category">
                     </div>
                   </div>
                 </div>
