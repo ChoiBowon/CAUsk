@@ -18,7 +18,6 @@ function closeMenuListener(evt) {
 }
 
 function categoryDirect(){
-  console.log("category들어옴");
   if(document.join.category_selbox.value == 'direct'){
     document.join.CategoryDirect.disabled = false;
     document.join.CategoryDirect.value = "";
@@ -40,6 +39,8 @@ function sizeDirect(){
     document.join.SizeDirect.disabled = true;
     document.join.SizeDirect.value = document.join.size_selbox.options[document.join.size_selbox.selectedIndex].value;
   }
+  console.log(document.join.SizeDirect.value);
+
 }
 
 function hot(){
@@ -47,7 +48,7 @@ function hot(){
   document.join.hotDirect.disabled = true;
   //console.log(document.join.hot_selbox.options[document.join.hot_selbox.selectedIndex].value);
   document.join.hotDirect.value = document.join.hot_selbox.options[document.join.hot_selbox.selectedIndex].value;
-  //console.log("Hello world");
+  console.log(document.join.hotDirect.value);
 }
 
 
