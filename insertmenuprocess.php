@@ -26,7 +26,7 @@ require_once("connect.php");
 
    $result=mysqli_query($conn, $sql);
 
-   echo ("<script>alert('메뉴가 추가되었습니다.');history.go(-1);</script>");
+   echo ("<script>alert('메뉴가 추가되었습니다.');history.go(-2);</script>");
   exit;
 
 
