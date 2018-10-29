@@ -19,7 +19,7 @@ require_once("connect.php");
 
 
 
- $sql="INSERT INTO menu (storeSerial,category,menuName,size,hotIce,price) VALUES('storeSerial','$Category','$MenuName','$Size','$HotIce','$Price')";
+ $sql="INSERT INTO menu (storeSerial,category,menuName,size,hotIce,price) VALUES('storeSerial','{$Category}','{$MenuName}','{$Size}','{$HotIce}','{$Price}')";
 
    $result=mysqli_query($conn, $sql);
 
