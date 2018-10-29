@@ -170,6 +170,9 @@ session_start();
             </form>
             </div>
             <div class="dialog-footer">
+              <div class="form-group text-center">
+                <button type="submit" class="btn btn-info">저장</button>
+              </div>
               <button type="button" class="btn btn-primary">저장하기</button>
             </div>
         </div>
