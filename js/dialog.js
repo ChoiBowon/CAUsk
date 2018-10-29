@@ -18,6 +18,7 @@ function closeMenuListener(evt) {
 }
 
 function categoryDirect(){
+  console.log("category들어옴");
   if(document.join.category_selbox.value == 'direct'){
     document.join.CategoryDirect.disabled = false;
     document.join.CategoryDirect.value = "";
@@ -29,7 +30,7 @@ function categoryDirect(){
 }
 
 function sizeDirect(){
-  console.log("들어옴");
+  console.log("size들어옴");
   if(document.join.size_selbox.value == 'direct'){
     document.join.SizeDirect.disabled = false;
     document.join.SizeDirect.value = "";
@@ -41,6 +42,7 @@ function sizeDirect(){
 }
 
 function hot(){
+  console.log("hot들어옴");
   document.join.hotDirect.disabled = true;
   //console.log(document.join.hot_selbox.options[document.join.hot_selbox.selectedIndex].value);
   document.join.hotDirect.value = document.join.hot_selbox.options[document.join.hot_selbox.selectedIndex].value;
