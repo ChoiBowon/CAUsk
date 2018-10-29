@@ -1,6 +1,6 @@
 <?php
 require_once("connect.php");
-session_start();
+
 
  $Category = $_POST['Category'];
  $MenuName = $_POST['MenuName'];
