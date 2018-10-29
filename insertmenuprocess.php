@@ -2,7 +2,7 @@
 require_once("connect.php");
 session_start();
 
- $Category = $_POST['CategoryDirect'];
+ $Category = $_POST['CategoryDirect.value'];
  $MenuName = $_POST['MenuName'];
  $Size = $_POST['SizeDirect'];
  $HotIce = $_POST['hotDirect'];
