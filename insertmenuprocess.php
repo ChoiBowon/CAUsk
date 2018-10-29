@@ -22,11 +22,11 @@ session_start();
 
 
 
- $sql="INSERT INTO menu (storeSerial,category,menuName,size,hotIce,price) VALUES('".$_SESSION['storeName']."','".$_POST['Category']."','".$_POST['MenuName']."','".$_POST['Size']."','".$_POST['HOTICE']."','".$_POST['Price']."')";
+ $sql="INSERT INTO menu (storeSerial,category,menuName,size,hotIce,price) VALUES('".$_SESSION['storeSerial']."','".$_POST['Category']."','".$_POST['MenuName']."','".$_POST['Size']."','".$_POST['HOTICE']."','".$_POST['Price']."')";
 
    $result=mysqli_query($conn, $sql);
 
-   echo ("<script>alert('메뉴가 추가되었습니다.');history.go(-2);</script>");
+   echo ("<script>alert('메뉴가 추가되었습니다.');history.go(-1);</script>");
   exit;
 
 
