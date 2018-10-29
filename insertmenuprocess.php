@@ -8,8 +8,6 @@ require_once("connect.php");
  $HotIce = $_POST['HOTICE'];
  $Price = $_POST['Price'];
 
- echo ("들어옴");
-
 
  // $sql = "SELECT storeSerial FROM store WHERE id = '$_SESSION['userId']'";
  // $res = mysqli_query($conn,'SELECT storeSerial FROM store WHERE id = '$_SESSION['userId']'');
@@ -22,7 +20,7 @@ require_once("connect.php");
 
 
 
- $sql="INSERT INTO menu (storeSerial,category,menuName,size,hotIce,price) VALUES('".$_SESSION['storeSerial']"','".$_POST['Category']."','".$_POST['MenuName']."','".$_POST['Size']."','".$_POST['HOTICE']."','".$_POST['Price']."')";
+ $sql="INSERT INTO menu (storeSerial,category,menuName,size,hotIce,price) VALUES('".$_SESSION['storeSerial']."','".$_POST['Category']."','".$_POST['MenuName']."','".$_POST['Size']."','".$_POST['HOTICE']."','".$_POST['Price']."')";
 
    $result=mysqli_query($conn, $sql);
 
