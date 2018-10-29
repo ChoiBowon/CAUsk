@@ -21,4 +21,5 @@ document.addEventListener("DOMContentLoaded", function() {
   showChart(false);
   $("#myBtn").addEventListener("click", addMenuListener);
   $("#close").addEventListener("click", closeMenuListener);
+  $("#submit").addEventListener("click", closeMenuListener);
 })

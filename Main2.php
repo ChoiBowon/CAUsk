@@ -18,7 +18,7 @@ session_start();
 
 </head>
 <body>
-  <script type="text/javascript" src="js/dialog.js?v=1"></script>
+  <script type="text/javascript" src="js/dialog.js?v=2"></script>
 
     <!-- nav -->
   <nav class="navbar navbar-default" style="background-color : #5DA4BE; height:80px;">
@@ -170,10 +170,14 @@ session_start();
             </form>
             </div>
             <div class="dialog-footer">
-              <div class="form-group text-center">
-                <button type="submit" class="btn btn-info">저장</button>
+              <!-- <button type="button" id="close" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button> -->
+               <div class="form-group text-center">
+                 <button type="submit" id="submit" class="btn btn-default" >저장</button>
               </div>
-              <button type="button" class="btn btn-primary">저장하기</button>
+              <!-- <button type="button" id="close" class="close">저장하기</button> -->
+
             </div>
         </div>
     </div>
