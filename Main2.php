@@ -71,21 +71,18 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
     $numrow = mysqli_num_rows($sql);
     // var_dump($numrow);
 
-    for ($i = 0; $i<$numrow; $i++){
-      $row = mysqli_fetch_assoc($sql)
+$i = 0;
+    while($row = mysqli_fetch_assoc($sql)){
       $category_list[$i]= $row['category'];
+      ++$i;
     }
-    // while($row = mysqli_fetch_assoc($sql)){
-    //   $category_list[$i]= $row['category'];
-    //   ++$i;
-    // }
 
      var_dump($category_list);
 
 
        for ($j=0; $j<$numrow; $j++){
          echo "<h2 class='section-title wow fadeInUp' data-wow-duration='1000ms' data-wow-delay='300ms' style='font-family: 'Do Hyeon', sans-serif;'>".$category_list[$j]."</h1>";
-         echo "<table class='table table-bordered'  style='font-family: 'Do Hyeon', sans-serif;'>
+        echo "<table class='table table-bordered'  style='font-family: 'Do Hyeon', sans-serif;'>
              <thead>
               <tr>
                   <th scope='col'>Menu</th>
