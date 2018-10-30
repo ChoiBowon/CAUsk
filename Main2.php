@@ -80,22 +80,23 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
 
      while($row = mysqli_fetch_assoc($result)){
        for ($j=0; $j<$numrow; $j++){
-         echo "<h2 class='section-title wow fadeInUp' data-wow-duration='1000ms' data-wow-delay='300ms' style='font-family: 'Do Hyeon', sans-serif;'>".$category_list[$j]."</h1>";
-
-         echo "<table class='table table-bordered'  style='font-family: 'Do Hyeon', sans-serif;'>
-             <thead>
-              <tr>
-                  <th scope='col'>Menu</th>
-                  <th scope='col'>Size</th>
-                  <th scope='col'>Hot/Ice</th>
-                  <th scope='col'>Price</th>
-              </tr>
-              </thead>";
          if ($category_list[$j] == $row['category']){
           //  echo "<h2 class='section-title wow fadeInUp' data-wow-duration='1000ms' data-wow-delay='300ms' style='font-family: 'Do Hyeon', sans-serif;'>".$category_list[$j]."</h1>";
+          echo "<h2 class='section-title wow fadeInUp' data-wow-duration='1000ms' data-wow-delay='300ms' style='font-family: 'Do Hyeon', sans-serif;'>".$category_list[$j]."</h1>";
 
+          echo "<table class='table table-bordered'  style='font-family: 'Do Hyeon', sans-serif;'>
+              <thead>
+               <tr>
+                   <th scope='col'>Menu</th>
+                   <th scope='col'>Size</th>
+                   <th scope='col'>Hot/Ice</th>
+                   <th scope='col'>Price</th>
+               </tr>
+               </thead>";
          }
        }
+
+
      }
 
 //      while($row = mysqli_fetch_assoc($sql)){
