@@ -81,8 +81,8 @@ var_dump($sql);
      }
      while($row = mysqli_fetch_assoc($result)){
        for ($j=0; $j<$numrow; $j++){
-         echo "<h2 class='section-title wow fadeInUp' data-wow-duration='1000ms' data-wow-delay='300ms' style='font-family: 'Do Hyeon', sans-serif;'>dfdddddd</h1>";
-
+         var_dump($category_list[$j]);
+         var_dump($row['category']);
          if ($category_list[$j] == $row['category']){
           //  echo "<h2 class='section-title wow fadeInUp' data-wow-duration='1000ms' data-wow-delay='300ms' style='font-family: 'Do Hyeon', sans-serif;'>".$category_list[$j]."</h1>";
            echo "<h2 class='section-title wow fadeInUp' data-wow-duration='1000ms' data-wow-delay='300ms' style='font-family: 'Do Hyeon', sans-serif;'>dfdfdfdf</h1>";
