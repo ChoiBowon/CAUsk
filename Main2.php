@@ -6,10 +6,11 @@ $serial = (int)$_SESSION['storeSerial'];
 
 // $result = mysqli_query($conn,'SELECT*FROM menu WHERE storeSerial = '$serial'');
 $result = mysqli_query($conn,'SELECT*FROM menu');
-var_dump($result);
 
 
-// $sql = mysqli_query($conn, 'SELECT DISTINCT category FROM menu WHERE storeSerial = '.$_SESSION['storeSerial'].'');
+
+$sql = mysqli_query($conn, 'SELECT DISTINCT category FROM menu WHERE storeSerial = '$_SESSION['storeSerial']'');
+var_dump($sql);
 // $sql = mysqli_query($conn, 'SELECT DISTINCT category FROM menu WHERE storeSerial = '.$_SESSION['storeSerial'].'');
 // $result1 = mysqli_query($conn, $sql);
 
@@ -72,7 +73,7 @@ var_dump($result);
     <?php
     echo "<table class='table table-bordered'  style='font-family: 'Do Hyeon', sans-serif;'>
         <thead>
-         <tr><th scope='col'>Storeserial</th>
+         <tr>
              <th scope='col'>Menu</th>
              <th scope='col'>Size</th>
              <th scope='col'>Hot/Ice</th>
@@ -83,7 +84,6 @@ var_dump($result);
       if ($row['storeSerial'] == $_SESSION['storeSerial']){
         echo "<tbody>";
         echo "<tr>";
-        echo "<th scope='row'>".$row['storeSerial']."</th>";
         echo "<th scope='row'>".$row['menuName']."</th>";
         echo "<th scope='row'>".$row['size']."</th>";
         echo "<th scope='row'>".$row['hotIce']."</th>";
