@@ -81,7 +81,7 @@ $i = 0;
 
 
        for ($j=0; $j<$numrow; $j++){
-         echo "<h2 class='section-title wow fadeInUp' data-wow-duration='1000ms' data-wow-delay='300ms' style='font-family: 'Do Hyeon', sans-serif;'>".$category_list[$j]."</h1>";
+         echo "<h2 class='section-title wow fadeInUp' data-wow-duration='1000ms' data-wow-delay='300ms' style='font-family: 'Do Hyeon', sans-serif;'>".$category_list[$j]."</h2>";
         echo "<table class='table table-bordered'  style='font-family: 'Do Hyeon', sans-serif;'>
              <thead>
               <tr>
