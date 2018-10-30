@@ -59,7 +59,7 @@ $sql = mysqli_query($conn, 'SELECT DISTINCT category FROM menu WHERE storeSerial
     <?php
     // $category_list = mysqli_fetch_assoc($sql);
     $category_list = [0];
-    $numrow = mysqli_num_rows($sql);
+    $numrow = count($sql);
     var_dump($numrow);
     for($i=0; $i<$numrow; $i++){
 
