@@ -73,7 +73,7 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
     $i = 0;
     while($row = mysqli_fetch_assoc($sql)){
       $category_list[$i]= $row['category'];
-      $i++;
+      ++$i;
     }
 
      var_dump($category_list[0]);
