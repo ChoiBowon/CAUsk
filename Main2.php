@@ -3,9 +3,9 @@ require_once("connect.php");
 session_start();
 var_dump($_SESSION['storeSerial']);
 $serial = (int)$_SESSION['storeSerial'];
-var_dump($serial);
-$result = mysqli_query($conn,'SELECT*FROM menu WHERE storeSerial = '$serial'');
-// $result = mysqli_query($conn,'SELECT*FROM menu');
+
+// $result = mysqli_query($conn,'SELECT*FROM menu WHERE storeSerial = '$serial'');
+$result = mysqli_query($conn,'SELECT*FROM menu');
 var_dump($result);
 
 
@@ -70,6 +70,40 @@ var_dump($result);
         <h1 class="section-title wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms" style="font-family: 'Do Hyeon', sans-serif;">우리 가게 메뉴판</h1>
     </div>
     <?php
+    echo "<table class='table table-bordered'  style='font-family: 'Do Hyeon', sans-serif;'>
+        <thead>
+         <tr><th scope='col'>Storeserial</th>
+             <th scope='col'>Menu</th>
+             <th scope='col'>Size</th>
+             <th scope='col'>Hot/Ice</th>
+             <th scope='col'>Price</th>
+         </tr>
+         </thead>";
+    while($row = mysqli_fetch_assoc($result)){
+      if ($row['storeSerial'] == $_SESSION['storeSerial']){
+        echo "<tbody>";
+        echo "<tr>";
+        echo "<th scope='row'>".$row['storeSerial']."</th>";
+        echo "<th scope='row'>".$row['menuName']."</th>";
+        echo "<th scope='row'>".$row['size']."</th>";
+        echo "<th scope='row'>".$row['hotIce']."</th>";
+        echo "<th scope='row'>".$row['price']."</th>";
+        echo "</tr>";
+        echo "</tbody>";
+      }
+            // for ($i = 0 ; $i<count($category_list); $i++){
+            //   if ($row[2] == $category_list[$i]){
+            //     echo "<tbody>";
+            //     echo "<tr>";
+            //     echo "<th scope='row'>".$row['menuName']."</th>";
+            //     echo "<th scope='row'>".$row['size']."</th>";
+            //     echo "<th scope='row'>".$row['hotIce']."</th>";
+            //     echo "<th scope='row'>".$row['price']."</th>";
+            //     echo "</tr>";
+            //     echo "</tbody>";
+            //   }
+            // }
+
     // $category_list = mysqli_fetch_assoc($sql);
     $category_list = [0];
     // $row = mysqli_fetch_assoc($result);
