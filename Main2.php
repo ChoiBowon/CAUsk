@@ -4,8 +4,9 @@ session_start();
 var_dump($_SESSION['storeSerial']);
 $serial = $_SESSION['storeSerial'];
 var_dump($serial);
-$result = mysqli_query($conn,'SELECT*FROM menu WHERE storeSerial = $serial');
+$result = mysqli_query($conn,'SELECT*FROM menu WHERE storeSerial = '$serial'');
 // $result = mysqli_query($conn,'SELECT*FROM menu');
+var_dump($result);
 
 
 // $sql = mysqli_query($conn, 'SELECT DISTINCT category FROM menu WHERE storeSerial = '.$_SESSION['storeSerial'].'');
@@ -71,10 +72,9 @@ $result = mysqli_query($conn,'SELECT*FROM menu WHERE storeSerial = $serial');
     <?php
     // $category_list = mysqli_fetch_assoc($sql);
     $category_list = [0];
-    $row = mysqli_fetch_assoc($result);
+    // $row = mysqli_fetch_assoc($result);
     // $numrow = mysqli_num_rows($sql);
-    // echo $sql;
-    var_dump($row);
+    // var_dump($row);
   //   for($i=0; $i<$numrow; $i++){
    //
   //      $category_list[$i]=mysqli_fetch_assoc($sql);
