@@ -9,7 +9,7 @@ $result = mysqli_query($conn,'SELECT*FROM menu');
 
 
 
-$sql = mysqli_query($conn, 'SELECT DISTINCT category FROM menu WHERE storeSerial = '".$serial."'');
+$sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial = '".$_SESSION['storeSerial']."'");
 var_dump($sql);
 // $sql = mysqli_query($conn, 'SELECT DISTINCT category FROM menu WHERE storeSerial = '.$_SESSION['storeSerial'].'');
 // $result1 = mysqli_query($conn, $sql);
