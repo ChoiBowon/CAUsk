@@ -1,12 +1,10 @@
 <?php
 require_once("connect.php");
 session_start();
-var_dump($_SESSION['storeSerial']);
-$serial = $_SESSION['storeSerial'];
 
-// $result = mysqli_query($conn,'SELECT*FROM menu WHERE storeSerial = '$serial'');
-$result = mysqli_query($conn,'SELECT*FROM menu');
 
+$result = mysqli_query($conn,"SELECT*FROM menu WHERE storeSerial = '".$_SESSION['storeSerial']."'");
+var_dump($result);
 
 
 $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial = '".$_SESSION['storeSerial']."'");
