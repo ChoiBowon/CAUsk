@@ -114,6 +114,8 @@ var_dump($sql);
     for($i=0; $i<$numrow; $i++){
 
        $category_list[$i]=mysqli_fetch_assoc($sql);
+       var_dump($category_list[$i]);
+
      }
   //   console.log($category_list);
   //   echo "<table class='table table-bordered'  style='font-family: 'Do Hyeon', sans-serif;'>
