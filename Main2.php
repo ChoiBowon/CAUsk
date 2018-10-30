@@ -76,7 +76,7 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
       ++$i;
     }
 
-     var_dump($category_list[0]);
+     var_dump($category_list);
 
 
        for ($j=0; $j<$numrow; $j++){
