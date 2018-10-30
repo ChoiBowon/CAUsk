@@ -77,7 +77,7 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
       ++$i;
     }
 
-     var_dump($category_list);
+    //  var_dump($category_list);
 
 
        for ($j=0; $j<$numrow; $j++){
@@ -110,89 +110,6 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
        }
            echo "</table>";
      }
-
-//      while($row = mysqli_fetch_assoc($sql)){
-//        var_dump($row['category']);
-//        $check = mysqli_query($conn, "SELECT * FROM menu WHERE category = '".$row['category']."'");
-//        var_dump($check);
-//
-//        echo "<tbody>";
-//  echo "<tr>";
-//  echo "<th scope='row'>a</th>";
-//  echo "<th scope='row'>b</th>";
-//  echo "<th scope='row'>c</th>";
-//  echo "<th scope='row'>d</th>";
-//  echo "</tr>";
-//  echo "</tbody>";
-//
-//
-//      }
-//      while($bori = mysqli_fetch_assoc($check)) { // 그 메뉴 하나하나마다 이렇게 테이블 html 생성
-//   echo "<tbody>";
-//   echo "<tr>";
-//   echo "<th scope='row'>".$bori['menuName']."</th>";
-//   echo "<th scope='row'>".$bori['size']."</th>";
-//   echo "<th scope='row'>".$bori['hotIce']."</th>";
-//   echo "<th scope='row'>".$bori['price']."</th>";
-//   echo "</tr>";
-//   echo "</tbody>";
-// }
-
-
-
-
-            // for ($i = 0 ; $i<count($category_list); $i++){
-            //   if ($row[2] == $category_list[$i]){
-            //     echo "<tbody>";
-            //     echo "<tr>";
-            //     echo "<th scope='row'>".$row['menuName']."</th>";
-            //     echo "<th scope='row'>".$row['size']."</th>";
-            //     echo "<th scope='row'>".$row['hotIce']."</th>";
-            //     echo "<th scope='row'>".$row['price']."</th>";
-            //     echo "</tr>";
-            //     echo "</tbody>";
-            //   }
-            // }
-
-
-  //   console.log($category_list);
-  //   echo "<table class='table table-bordered'  style='font-family: 'Do Hyeon', sans-serif;'>
-  //       <thead>
-  //       <tr>
-  //           <th scope='col'>Menu</th>
-  //           <th scope='col'>Size</th>
-  //           <th scope='col'>Hot/Ice</th>
-  //           <th scope='col'>Price</th>
-  //       </tr>
-  //       </thead>";
-  //       var_dump($category_list);
-  //       // echo($category_list);
-  //       while($row = mysqli_fetch_assoc($result)){
-  //         for ($i = 0 ; $i<count($category_list); $i++){
-  //           if ($row[2] == $category_list[$i]){
-  //             echo "<tbody>";
-  //             echo "<tr>";
-  //             echo "<th scope='row'>".$row['menuName']."</th>";
-  //             echo "<th scope='row'>".$row['size']."</th>";
-  //             echo "<th scope='row'>".$row['hotIce']."</th>";
-  //             echo "<th scope='row'>".$row['price']."</th>";
-  //             echo "</tr>";
-  //             echo "</tbody>";
-  //           }
-  //         }
-   //
-   //
-  //         // <tr>
-  //         //     <th scope="row">핫초코</th>
-  //         //     <td>4.9</td>
-  //         //     <td>5.4</td>
-  //         //     <td>플랫화이트</td>
-  //         //     <td>4.4</td>
-  //         //     <td>0</td>
-  //         // </tr>
-  //         // </tbody>
-  //       }
-  //         echo "</table>";
 
           ?>
 
@@ -315,7 +232,7 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
 </div>
     <div class ="panel panel-default" style="border:0px;">
 
-        <div class="panel-footer" style="background-color : #5DA4BE; color:#FFFF; text-align:center; position:absolute;
+        <div class="panel-footer" style="background-color : #5DA4BE; color:#FFFF; text-align:center; 
 
         bottom:0; width:100%;">Made by 2018 CAUsk team</div>
     </div>
