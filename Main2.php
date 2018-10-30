@@ -71,7 +71,7 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
     $numrow = mysqli_num_rows($sql);
     // var_dump($numrow);
 
-$i = 0;
+    $i = 0;
     while($row = mysqli_fetch_assoc($sql)){
       $category_list[$i]= $row['category'];
       ++$i;
@@ -81,8 +81,8 @@ $i = 0;
 
 
        for ($j=0; $j<$numrow; $j++){
-         echo "<h2  data-wow-duration='1000ms' data-wow-delay='300ms' style='font-family: 'Do Hyeon', sans-serif;'>".$category_list[$j]."</h2>";
-        echo "<table class='table table-bordered'  style='font-family: 'Do Hyeon', sans-serif;'>
+         echo "<h2 data-wow-duration='1000ms' data-wow-delay='300ms' style='font-family: 'Do Hyeon', sans-serif;'>".$category_list[$j]."</h2>";
+         echo "<table class='table table-bordered'  style='font-family: 'Do Hyeon', sans-serif;'>
              <thead>
               <tr>
                   <th scope='col'>Menu</th>
@@ -108,6 +108,7 @@ $i = 0;
            break;
          }
        }
+           echo "</table>";
      }
 
 //      while($row = mysqli_fetch_assoc($sql)){
@@ -139,7 +140,7 @@ $i = 0;
 
 
 
-    echo "</table>";
+
             // for ($i = 0 ; $i<count($category_list); $i++){
             //   if ($row[2] == $category_list[$i]){
             //     echo "<tbody>";
