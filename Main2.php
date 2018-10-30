@@ -75,7 +75,7 @@ $sql = mysqli_query($conn, 'SELECT DISTINCT category FROM menu WHERE storeSerial
             <th scope='col'>Price</th>
         </tr>
         </thead>";
-
+        var_dump($category_list);
         // echo($category_list);
         while($row = mysqli_fetch_assoc($result)){
           for ($i = 0 ; $i<count($category_list); $i++){
