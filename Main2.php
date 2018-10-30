@@ -73,47 +73,57 @@ var_dump($sql);
 //sql 는 카테고리 8개만 뽑은거
     $category_list = [0];
     $numrow = mysqli_num_rows($sql);
-    var_dump($numrow);
+    // var_dump($numrow);
     for($i=0; $i<$numrow; $i++){
 
        $category_list[$i]=mysqli_fetch_assoc($sql);
      }
      var_dump($category_list[0]);
 
-     while($row = mysqli_fetch_assoc($result)){
-       for ($j=0; $j<$numrow; $j++){
-         echo "<h2 class='section-title wow fadeInUp' data-wow-duration='1000ms' data-wow-delay='300ms' style='font-family: 'Do Hyeon', sans-serif;'>".$category_list[0]."</h1>";
-
-         echo "<table class='table table-bordered'  style='font-family: 'Do Hyeon', sans-serif;'>
-             <thead>
-              <tr>
-                  <th scope='col'>Menu</th>
-                  <th scope='col'>Size</th>
-                  <th scope='col'>Hot/Ice</th>
-                  <th scope='col'>Price</th>
-              </tr>
-              </thead>";
-         if ($category_list[$j] == $row['category']){
-          //  echo "<h2 class='section-title wow fadeInUp' data-wow-duration='1000ms' data-wow-delay='300ms' style='font-family: 'Do Hyeon', sans-serif;'>".$category_list[$j]."</h1>";
-
-         }
-       }
-     }
-
-    //  while($row = mysqli_fetch_assoc($sql)){
-    //    $check = mysqli_query($conn, "SELECT * FROM menu WHERE category = '".$row['category']."'");
+    //  while($row = mysqli_fetch_assoc($result)){
+    //    for ($j=0; $j<$numrow; $j++){
+    //      echo "<h2 class='section-title wow fadeInUp' data-wow-duration='1000ms' data-wow-delay='300ms' style='font-family: 'Do Hyeon', sans-serif;'>".$category_list[$j]."</h1>";
      //
-    //    if ($row['storeSerial'] == $_SESSION['storeSerial']){
-    //      echo "<tbody>";
-    //      echo "<tr>";
-    //      echo "<th scope='row'>".$row['menuName']."</th>";
-    //      echo "<th scope='row'>".$row['size']."</th>";
-    //      echo "<th scope='row'>".$row['hotIce']."</th>";
-    //      echo "<th scope='row'>".$row['price']."</th>";
-    //      echo "</tr>";
-    //      echo "</tbody>";
+    //      echo "<table class='table table-bordered'  style='font-family: 'Do Hyeon', sans-serif;'>
+    //          <thead>
+    //           <tr>
+    //               <th scope='col'>Menu</th>
+    //               <th scope='col'>Size</th>
+    //               <th scope='col'>Hot/Ice</th>
+    //               <th scope='col'>Price</th>
+    //           </tr>
+    //           </thead>";
+    //      if ($category_list[$j] == $row['category']){
+    //       //  echo "<h2 class='section-title wow fadeInUp' data-wow-duration='1000ms' data-wow-delay='300ms' style='font-family: 'Do Hyeon', sans-serif;'>".$category_list[$j]."</h1>";
+     //
+    //      }
     //    }
     //  }
+
+     while($row = mysqli_fetch_assoc($sql)){
+       $check = mysqli_query($conn, "SELECT * FROM menu WHERE category = '".$row['category']."'");
+
+       echo "<tbody>";
+ echo "<tr>";
+ echo "<th scope='row'></th>";
+ echo "<th scope='row'></th>";
+ echo "<th scope='row'></th>";
+ echo "<th scope='row'></th>";
+ echo "</tr>";
+ echo "</tbody>";
+
+
+     }
+     while($bori = mysqli_fetch_assoc($check)) { // 그 메뉴 하나하나마다 이렇게 테이블 html 생성
+  echo "<tbody>";
+  echo "<tr>";
+  echo "<th scope='row'>".$bori['menuName']."</th>";
+  echo "<th scope='row'>".$bori['size']."</th>";
+  echo "<th scope='row'>".$bori['hotIce']."</th>";
+  echo "<th scope='row'>".$bori['price']."</th>";
+  echo "</tr>";
+  echo "</tbody>";
+}
 
 
 
