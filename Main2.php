@@ -3,8 +3,8 @@ require_once("connect.php");
 $result = mysqli_query($conn,'SELECT*FROM menu WHERE storeSerial = '.$_SESSION['storeSerial'].'');
 session_start();
 // $sql = mysqli_query($conn, 'SELECT DISTINCT category FROM menu WHERE storeSerial = '.$_SESSION['storeSerial'].'');
-$sql = "SELECT DISTINCT category FROM menu WHERE storeSerial = '.$_SESSION['storeSerial'].'";
-$result1 = mysqli_query($conn, $sql);
+$sql = mysqli_query($conn, 'SELECT DISTINCT category FROM menu WHERE storeSerial = '.$_SESSION['storeSerial'].'');
+// $result1 = mysqli_query($conn, $sql);
 
 // $sql = "SELECT DISTINCT category FROM menu WHERE storeSerial = '.$_SESSION['storeSerial'].'";
 // $sql2 = mysqli_query($sql);
@@ -65,10 +65,9 @@ $result1 = mysqli_query($conn, $sql);
     <?php
     // $category_list = mysqli_fetch_assoc($sql);
     $category_list = [0];
-    $numrow = mysqli_num_rows($result1);
+    $numrow = mysqli_num_rows($sql);
     echo $numrow;
     var_dump($numrow);
-    console.log($result1);
 
   //   for($i=0; $i<$numrow; $i++){
    //
