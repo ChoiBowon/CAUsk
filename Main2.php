@@ -107,14 +107,14 @@ var_dump($sql);
 
     // $category_list = mysqli_fetch_assoc($sql);
     $category_list = [0];
-    // $row = mysqli_fetch_assoc($result);
-    // $numrow = mysqli_num_rows($sql);
-    // var_dump($row);
-  //   for($i=0; $i<$numrow; $i++){
-   //
-  //      $category_list[$i]=mysqli_fetch_assoc($sql);
-   //
-  //  }
+    $row = mysqli_fetch_assoc($sql);
+    $numrow = mysqli_num_rows($sql);
+    var_dump($row);
+    var_dump($numrow);
+    for($i=0; $i<$numrow; $i++){
+
+       $category_list[$i]=mysqli_fetch_assoc($sql);
+     }
   //   console.log($category_list);
   //   echo "<table class='table table-bordered'  style='font-family: 'Do Hyeon', sans-serif;'>
   //       <thead>
