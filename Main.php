@@ -54,7 +54,7 @@ require_once("connect.php");
         <h1 class="section-title wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms" style="font-family: 'Do Hyeon', sans-serif;">우리 가게 메뉴판</h1>
     </div>
 
-        <table class="table table-bordered"  style="font-family: 'Do Hyeon', sans-serif;">
+        <!-- <table class="table table-bordered"  style="font-family: 'Do Hyeon', sans-serif;">
             <thead>
             <tr>
                 <th scope="col">Beverage (HOT/ICED)</th>
@@ -92,7 +92,6 @@ require_once("connect.php");
             </tr>
             <tr>
                 <th scope="row">차이라떼</th>
-                <!--<td colspan="2">Larry the Bird</td>-->
                 <td>4.9</td>
                 <td>5.4</td>
                 <td>카페라떼</td>
@@ -100,7 +99,7 @@ require_once("connect.php");
                 <td>5.1</td>
             </tr>
             </tbody>
-        </table>
+        </table> -->
 
         <div class="row-md-6" >
             <p style="position:right">
