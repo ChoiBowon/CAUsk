@@ -76,52 +76,52 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
      }
      var_dump($category_list[0]);
 
-    //  while($row = mysqli_fetch_assoc($result)){
-    //    for ($j=0; $j<$numrow; $j++){
-    //      echo "<h2 class='section-title wow fadeInUp' data-wow-duration='1000ms' data-wow-delay='300ms' style='font-family: 'Do Hyeon', sans-serif;'>".$category_list[$j]."</h1>";
-     //
-    //      echo "<table class='table table-bordered'  style='font-family: 'Do Hyeon', sans-serif;'>
-    //          <thead>
-    //           <tr>
-    //               <th scope='col'>Menu</th>
-    //               <th scope='col'>Size</th>
-    //               <th scope='col'>Hot/Ice</th>
-    //               <th scope='col'>Price</th>
-    //           </tr>
-    //           </thead>";
-    //      if ($category_list[$j] == $row['category']){
-    //       //  echo "<h2 class='section-title wow fadeInUp' data-wow-duration='1000ms' data-wow-delay='300ms' style='font-family: 'Do Hyeon', sans-serif;'>".$category_list[$j]."</h1>";
-     //
-    //      }
-    //    }
-    //  }
-
      while($row = mysqli_fetch_assoc($sql)){
-       var_dump($row['category']);
-       $check = mysqli_query($conn, "SELECT * FROM menu WHERE category = '".$row['category']."'");
-       var_dump($check);
+       for ($j=0; $j<$numrow; $j++){
+         echo "<h2 class='section-title wow fadeInUp' data-wow-duration='1000ms' data-wow-delay='300ms' style='font-family: 'Do Hyeon', sans-serif;'>".$row['category']."</h1>";
 
-       echo "<tbody>";
- echo "<tr>";
- echo "<th scope='row'>a</th>";
- echo "<th scope='row'>b</th>";
- echo "<th scope='row'>c</th>";
- echo "<th scope='row'>d</th>";
- echo "</tr>";
- echo "</tbody>";
+         echo "<table class='table table-bordered'  style='font-family: 'Do Hyeon', sans-serif;'>
+             <thead>
+              <tr>
+                  <th scope='col'>Menu</th>
+                  <th scope='col'>Size</th>
+                  <th scope='col'>Hot/Ice</th>
+                  <th scope='col'>Price</th>
+              </tr>
+              </thead>";
+         if ($category_list[$j] == $row['category']){
+          //  echo "<h2 class='section-title wow fadeInUp' data-wow-duration='1000ms' data-wow-delay='300ms' style='font-family: 'Do Hyeon', sans-serif;'>".$category_list[$j]."</h1>";
 
-
+         }
+       }
      }
-     while($bori = mysqli_fetch_assoc($check)) { // 그 메뉴 하나하나마다 이렇게 테이블 html 생성
-  echo "<tbody>";
-  echo "<tr>";
-  echo "<th scope='row'>".$bori['menuName']."</th>";
-  echo "<th scope='row'>".$bori['size']."</th>";
-  echo "<th scope='row'>".$bori['hotIce']."</th>";
-  echo "<th scope='row'>".$bori['price']."</th>";
-  echo "</tr>";
-  echo "</tbody>";
-}
+
+//      while($row = mysqli_fetch_assoc($sql)){
+//        var_dump($row['category']);
+//        $check = mysqli_query($conn, "SELECT * FROM menu WHERE category = '".$row['category']."'");
+//        var_dump($check);
+//
+//        echo "<tbody>";
+//  echo "<tr>";
+//  echo "<th scope='row'>a</th>";
+//  echo "<th scope='row'>b</th>";
+//  echo "<th scope='row'>c</th>";
+//  echo "<th scope='row'>d</th>";
+//  echo "</tr>";
+//  echo "</tbody>";
+//
+//
+//      }
+//      while($bori = mysqli_fetch_assoc($check)) { // 그 메뉴 하나하나마다 이렇게 테이블 html 생성
+//   echo "<tbody>";
+//   echo "<tr>";
+//   echo "<th scope='row'>".$bori['menuName']."</th>";
+//   echo "<th scope='row'>".$bori['size']."</th>";
+//   echo "<th scope='row'>".$bori['hotIce']."</th>";
+//   echo "<th scope='row'>".$bori['price']."</th>";
+//   echo "</tr>";
+//   echo "</tbody>";
+// }
 
 
 
