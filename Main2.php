@@ -57,6 +57,8 @@ $sql = mysqli_query($conn, 'SELECT DISTINCT category FROM menu WHERE storeSerial
         <h1 class="section-title wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms" style="font-family: 'Do Hyeon', sans-serif;">우리 가게 메뉴판</h1>
     </div>
     <?php
+    $category_list = mysqli_fetch_assoc($sql);
+    console.log($sql);
     echo "<table class='table table-bordered'  style='font-family: 'Do Hyeon', sans-serif;'>
         <thead>
         <tr>
@@ -68,12 +70,12 @@ $sql = mysqli_query($conn, 'SELECT DISTINCT category FROM menu WHERE storeSerial
         </thead>";
 
 
-        $category_list = mysqli_fetch_assoc($sql);
-        // console.log($category_list);
-        echo($category_list);
+
+        console.log($category_list);
+        // echo($category_list);
         while($row = mysqli_fetch_assoc($result)){
           for ($i = 0 ; $i<count($category_list); $i++){
-            if ($row[2] == $category[i]){
+            if ($row[2] == $category_list[i]){
               echo "<tbody>";
               echo "<tr>";
               echo "<th scope='row'>".$row['menuName']."</th>";
