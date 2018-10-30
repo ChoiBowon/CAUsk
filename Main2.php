@@ -2,7 +2,7 @@
 require_once("connect.php");
 session_start();
 var_dump($_SESSION['storeSerial']);
-$serial = $_SESSION['storeSerial'];
+$serial = (int)$_SESSION['storeSerial'];
 var_dump($serial);
 $result = mysqli_query($conn,'SELECT*FROM menu WHERE storeSerial = 13');
 // $result = mysqli_query($conn,'SELECT*FROM menu');
