@@ -4,7 +4,7 @@ session_start();
 var_dump($_SESSION['storeSerial']);
 $serial = (int)$_SESSION['storeSerial'];
 var_dump($serial);
-$result = mysqli_query($conn,'SELECT*FROM menu WHERE storeSerial = 13');
+$result = mysqli_query($conn,'SELECT*FROM menu WHERE storeSerial = '$serial'');
 // $result = mysqli_query($conn,'SELECT*FROM menu');
 var_dump($result);
 
