@@ -77,8 +77,9 @@ var_dump($sql);
     for($i=0; $i<$numrow; $i++){
 
        $category_list[$i]=mysqli_fetch_assoc($sql);
-       var_dump($category_list[$i]);
      }
+     var_dump($category_list[0]);
+
      while($row = mysqli_fetch_assoc($result)){
        for ($j=0; $j<$numrow; $j++){
          if ($sql[$j] == $row['category']){
