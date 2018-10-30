@@ -51,7 +51,7 @@ require_once("connect.php");
 
   <!-- 메뉴판 -->
     <div class="section-header">
-        <h1 class="section-title wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms" style="font-family: 'Do Hyeon', sans-serif;">우리 가게 메뉴판</h1>
+        <h1 class="section-title wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms" style="font-family: 'Do Hyeon', sans-serif;">로그인 혹은 회원가입을 먼저 해주세요!</h1>
     </div>
 
         <!-- <table class="table table-bordered"  style="font-family: 'Do Hyeon', sans-serif;">
