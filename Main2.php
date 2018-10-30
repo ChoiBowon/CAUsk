@@ -68,51 +68,51 @@ $result1 = mysqli_query($conn, $sql);
     $numrow = mysqli_num_rows($result1);
     echo $numrow;
     var_dump($numrow);
-    console.log($sql);
+    console.log($result1);
 
-    for($i=0; $i<$numrow; $i++){
-
-       $category_list[$i]=mysqli_fetch_assoc($sql);
-
-   }
-    console.log($category_list);
-    echo "<table class='table table-bordered'  style='font-family: 'Do Hyeon', sans-serif;'>
-        <thead>
-        <tr>
-            <th scope='col'>Menu</th>
-            <th scope='col'>Size</th>
-            <th scope='col'>Hot/Ice</th>
-            <th scope='col'>Price</th>
-        </tr>
-        </thead>";
-        var_dump($category_list);
-        // echo($category_list);
-        while($row = mysqli_fetch_assoc($result)){
-          for ($i = 0 ; $i<count($category_list); $i++){
-            if ($row[2] == $category_list[$i]){
-              echo "<tbody>";
-              echo "<tr>";
-              echo "<th scope='row'>".$row['menuName']."</th>";
-              echo "<th scope='row'>".$row['size']."</th>";
-              echo "<th scope='row'>".$row['hotIce']."</th>";
-              echo "<th scope='row'>".$row['price']."</th>";
-              echo "</tr>";
-              echo "</tbody>";
-            }
-          }
-
-
-          // <tr>
-          //     <th scope="row">핫초코</th>
-          //     <td>4.9</td>
-          //     <td>5.4</td>
-          //     <td>플랫화이트</td>
-          //     <td>4.4</td>
-          //     <td>0</td>
-          // </tr>
-          // </tbody>
-        }
-          echo "</table>";
+  //   for($i=0; $i<$numrow; $i++){
+   //
+  //      $category_list[$i]=mysqli_fetch_assoc($sql);
+   //
+  //  }
+  //   console.log($category_list);
+  //   echo "<table class='table table-bordered'  style='font-family: 'Do Hyeon', sans-serif;'>
+  //       <thead>
+  //       <tr>
+  //           <th scope='col'>Menu</th>
+  //           <th scope='col'>Size</th>
+  //           <th scope='col'>Hot/Ice</th>
+  //           <th scope='col'>Price</th>
+  //       </tr>
+  //       </thead>";
+  //       var_dump($category_list);
+  //       // echo($category_list);
+  //       while($row = mysqli_fetch_assoc($result)){
+  //         for ($i = 0 ; $i<count($category_list); $i++){
+  //           if ($row[2] == $category_list[$i]){
+  //             echo "<tbody>";
+  //             echo "<tr>";
+  //             echo "<th scope='row'>".$row['menuName']."</th>";
+  //             echo "<th scope='row'>".$row['size']."</th>";
+  //             echo "<th scope='row'>".$row['hotIce']."</th>";
+  //             echo "<th scope='row'>".$row['price']."</th>";
+  //             echo "</tr>";
+  //             echo "</tbody>";
+  //           }
+  //         }
+   //
+   //
+  //         // <tr>
+  //         //     <th scope="row">핫초코</th>
+  //         //     <td>4.9</td>
+  //         //     <td>5.4</td>
+  //         //     <td>플랫화이트</td>
+  //         //     <td>4.4</td>
+  //         //     <td>0</td>
+  //         // </tr>
+  //         // </tbody>
+  //       }
+  //         echo "</table>";
 
           ?>
 
