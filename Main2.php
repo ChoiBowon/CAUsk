@@ -96,7 +96,7 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
 
                echo "<tbody>";
                 echo "<tr>";
-                echo "<th scope='row'>".$row['menuName']"</th>";
+                echo "<th scope='row'>".$row['menuName']."</th>";
                 echo "<th scope='row'>".$row['size']."</th>";
                 echo "<th scope='row'>".$row['hotIce']."</th>";
                 echo "<th scope='row'>".$row['price']."</th>";
