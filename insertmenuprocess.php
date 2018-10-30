@@ -2,13 +2,7 @@
 require_once("connect.php");
 session_start();
 
- // $Category = $_POST['category_selbox'];
- // $MenuName = $_POST['MenuName'];
- // $Size = $_POST['size_selbox'];
  $HotIce = $_POST['hot_selbox'];
- // $Price = $_POST['Price'];
-
-
 
 echo('<pre>'); print_r($_POST); echo('</pre>');
 
@@ -28,11 +22,11 @@ echo($HotIce);
 
    $result=mysqli_query($conn, $sql);
 
-  //  echo ("<script>alert('메뉴가 추가되었습니다.');history.go(-1);</script>");
-  // exit;
-  //
-  //
-  // header("Location:Main2.php");
+   echo ("<script>alert('메뉴가 추가되었습니다.');history.go(-1);</script>");
+  exit;
+
+
+  header("Location:Main2.php");
 
 
  ?>

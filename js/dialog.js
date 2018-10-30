@@ -28,11 +28,9 @@ function categoryDirect(){
     // document.getElementById('categoryDirect').value = document.join.category_selbox.options[document.join.category_selbox.selectedIndex].value;
 
   }
-  console.log(CategoryDirect.value);
 }
 
 function sizeDirect(){
-  console.log("size들어옴");
   if(document.join.size_selbox.value == 'direct'){
     document.join.SizeDirect.disabled = false;
     document.join.SizeDirect.value = "";
@@ -41,16 +39,13 @@ function sizeDirect(){
     document.join.SizeDirect.disabled = true;
     document.join.SizeDirect.value = document.join.size_selbox.options[document.join.size_selbox.selectedIndex].value;
   }
-  console.log(document.join.SizeDirect.value);
 
 }
 
 function hot(){
-  console.log("hot들어옴");
   document.join.hotDirect.disabled = true;
   //console.log(document.join.hot_selbox.options[document.join.hot_selbox.selectedIndex].value);
   document.join.hotDirect.value = document.join.hot_selbox.options[document.join.hot_selbox.selectedIndex].value;
-  console.log(document.join.hotDirect.value);
 }
 
 

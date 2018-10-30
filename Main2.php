@@ -1,7 +1,8 @@
 <?php
 require_once("connect.php");
-$result = mysqli_query($conn,'SELECT*FROM menu');
+$result = mysqli_query($conn,'SELECT*FROM menu WHERE storeSerial = '.$_SESSION['storeSerial'].'');
 session_start();
+$sql = mysqli_query($conn, 'SELECT DISTINCT category FROM menu WHERE storeSerial = '.$_SESSION['storeSerial'].'');
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,58 +56,53 @@ session_start();
     <div class="section-header">
         <h1 class="section-title wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms" style="font-family: 'Do Hyeon', sans-serif;">우리 가게 메뉴판</h1>
     </div>
-
-    <table class="table table-bordered"  style="font-family: 'Do Hyeon', sans-serif;">
+    <?php
+    echo "<table class='table table-bordered'  style='font-family: 'Do Hyeon', sans-serif;'>
         <thead>
         <tr>
-            <th scope="col">Beverage (HOT/ICED)</th>
-            <th scope="col">R</th>
-            <th scope="col">L</th>
-            <th scope="col">Espresso (HOT/ICED)</th>
-            <th scope="col">R</th>
-            <th scope="col">L</th>
+            <th scope='col'>Menu</th>
+            <th scope='col'>Size</th>
+            <th scope='col'>Hot/Ice</th>
+            <th scope='col'>Price</th>
         </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <th scope="row">핫초코</th>
-            <td>4.9</td>
-            <td>5.4</td>
-            <td>플랫화이트</td>
-            <td>4.4</td>
-            <td>0</td>
-        </tr>
-        <tr>
-            <th scope="row">홍차라떼</th>
-            <td>4.9</td>
-            <td>5.4</td>
-            <td>에스프레소</td>
-            <td>3.5</td>
-            <td>4.0</td>
-        </tr>
-        <tr>
-            <th scope="row">녹차라뗴</th>
-            <td>4.9</td>
-            <td>5.4</td>
-            <td>아메리카</td>
-            <td>4.1</td>
-            <td>4.6</td>
-        </tr>
-        <tr>
-            <th scope="row">차이라떼</th>
-            <!--<td colspan="2">Larry the Bird</td>-->
-            <td>4.9</td>
-            <td>5.4</td>
-            <td>카페라떼</td>
-            <td>4.6</td>
-            <td>5.1</td>
-        </tr>
-        </tbody>
-    </table>
+        </thead>";
+
+
+        $category_list = mysqli_fetch_assoc($sql);
+        console.log($category_list);
+        while($row = mysqli_fetch_assoc($result)){
+          for ($i = 0 ; $i<count($category_list); $i++){
+            if ($row[2] == $category[i]){
+              echo "<tbody>";
+              echo "<tr>";
+              echo "<th scope='row'>".$row['menuName']."</th>";
+              echo "<th scope='row'>".$row['size']."</th>";
+              echo "<th scope='row'>".$row['hotIce']."</th>";
+              echo "<th scope='row'>".$row['price']."</th>";
+              echo "</tr>";
+              echo "</tbody>";
+            }
+          }
+
+
+          // <tr>
+          //     <th scope="row">핫초코</th>
+          //     <td>4.9</td>
+          //     <td>5.4</td>
+          //     <td>플랫화이트</td>
+          //     <td>4.4</td>
+          //     <td>0</td>
+          // </tr>
+          // </tbody>
+        }
+          echo "</table>";
+
+          ?>
+
 
     <div class="row-md-6" >
         <p style="position:right">
-            <a href="#myModal" id="myBtn" data-toggle="modal" data-target="#myModal" style="font-family: 'Do Hyeon', sans-serif; font-size:20px; margin-left: 1060px;" >메뉴 수정</a>
+            <a href="#myModal" id="myBtn" data-toggle="modal" data-target="#myModal" style="font-family: 'Do Hyeon', sans-serif; font-size:20px; margin-left: 1060px;" >메뉴 추가</a>
             <!-- <button type="button" id="myBtn" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">메뉴 추가</button> -->
         </p>
         <!-- Modal -->
