@@ -60,6 +60,9 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
         <h1 class="section-title wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms" style="font-family: 'Do Hyeon', sans-serif;">주문 현황</h1>
     </div>
 
+    <br>
+    <br>
+    <br>
     <!-- 메뉴판 -->
     <div class="section-header">
         <h1 class="section-title wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms" style="font-family: 'Do Hyeon', sans-serif;">우리 가게 메뉴판</h1>
@@ -232,7 +235,7 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
 </div>
     <div class ="panel panel-default" style="border:0px;">
 
-        <div class="panel-footer" style="background-color : #5DA4BE; color:#FFFF; text-align:center; 
+        <div class="panel-footer" style="background-color : #5DA4BE; color:#FFFF; text-align:center;
 
         bottom:0; width:100%;">Made by 2018 CAUsk team</div>
     </div>
