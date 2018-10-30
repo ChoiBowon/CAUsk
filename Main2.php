@@ -62,7 +62,7 @@ $sql = mysqli_query($conn, 'SELECT DISTINCT category FROM menu WHERE storeSerial
     $numrow = mysqli_num_rows($sql);
     for($i=0; $i<$numrow; $i++){
 
-       $category_list[$i]=mysqli_fetch_array($sql);
+       $category_list[$i]=mysqli_fetch_assoc($sql);
 
    }
     console.log($category_list);
@@ -79,7 +79,7 @@ $sql = mysqli_query($conn, 'SELECT DISTINCT category FROM menu WHERE storeSerial
         // echo($category_list);
         while($row = mysqli_fetch_assoc($result)){
           for ($i = 0 ; $i<count($category_list); $i++){
-            if ($row[2] == $category_list[i]){
+            if ($row[2] == $category_list[$i]){
               echo "<tbody>";
               echo "<tr>";
               echo "<th scope='row'>".$row['menuName']."</th>";
