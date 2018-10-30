@@ -67,56 +67,6 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
     <div class="section-header">
         <h1 class="section-title wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms" style="font-family: 'Do Hyeon', sans-serif;">우리 가게 메뉴판</h1>
     </div>
-    <?php
-//result 는 이 storeSerial의 메뉴 전부다
-//sql 는 카테고리 8개만 뽑은거
-    $category_list = [0];
-    $numrow = mysqli_num_rows($sql);
-    // var_dump($numrow);
-
-    $i = 0;
-    while($row = mysqli_fetch_assoc($sql)){
-      $category_list[$i]= $row['category'];
-      ++$i;
-    }
-
-    //  var_dump($category_list);
-
-
-       for ($j=0; $j<$numrow; $j++){
-         echo "<h2 data-wow-duration='1000ms' data-wow-delay='300ms' style='font-family: 'Do Hyeon', sans-serif;'>".$category_list[$j]."</h2>";
-         echo "<table class='table table-bordered'  style='font-family: 'Do Hyeon', sans-serif;'>
-             <thead>
-              <tr>
-                  <th scope='col'>Menu</th>
-                  <th scope='col'>Size</th>
-                  <th scope='col'>Hot/Ice</th>
-                  <th scope='col'>Price</th>
-              </tr>
-              </thead>";
-
-         while($row = mysqli_fetch_assoc($result)){
-           if ($row['category'] == $category_list[$j]){
-          //  echo "<h2 class='section-title wow fadeInUp' data-wow-duration='1000ms' data-wow-delay='300ms' style='font-family: 'Do Hyeon', sans-serif;'>".$category_list[$j]."</h1>";
-
-               echo "<tbody>";
-                echo "<tr>";
-                echo "<th scope='row'>".$row['menuName']."</th>";
-                echo "<th scope='row'>".$row['size']."</th>";
-                echo "<th scope='row'>".$row['hotIce']."</th>";
-                echo "<th scope='row'>".$row['price']."</th>";
-                echo "</tr>";
-                echo "</tbody>";
-         }else{
-           break;
-         }
-       }
-           echo "</table>";
-     }
-
-          ?>
-
-
     <div class="row-md-6" >
         <p style="position:right">
             <a href="#myModal" id="myBtn" data-toggle="modal" data-target="#myModal" style="font-family: 'Do Hyeon', sans-serif; font-size:20px; margin-left: 1060px;" >메뉴 추가</a>
@@ -230,6 +180,57 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
         </div>
     </div>
     </div>
+    <?php
+//result 는 이 storeSerial의 메뉴 전부다
+//sql 는 카테고리 8개만 뽑은거
+    $category_list = [0];
+    $numrow = mysqli_num_rows($sql);
+    // var_dump($numrow);
+
+    $i = 0;
+    while($row = mysqli_fetch_assoc($sql)){
+      $category_list[$i]= $row['category'];
+      ++$i;
+    }
+
+    //  var_dump($category_list);
+
+
+       for ($j=0; $j<$numrow; $j++){
+         echo "<h2 data-wow-duration='1000ms' data-wow-delay='300ms' style='font-family: 'Do Hyeon', sans-serif;'>".$category_list[$j]."</h2>";
+         echo "<table class='table table-bordered'  style='font-family: 'Do Hyeon', sans-serif;'>
+             <thead>
+              <tr>
+                  <th scope='col'>Menu</th>
+                  <th scope='col'>Size</th>
+                  <th scope='col'>Hot/Ice</th>
+                  <th scope='col'>Price</th>
+              </tr>
+              </thead>";
+
+         while($row = mysqli_fetch_assoc($result)){
+           if ($row['category'] == $category_list[$j]){
+          //  echo "<h2 class='section-title wow fadeInUp' data-wow-duration='1000ms' data-wow-delay='300ms' style='font-family: 'Do Hyeon', sans-serif;'>".$category_list[$j]."</h1>";
+
+               echo "<tbody>";
+                echo "<tr>";
+                echo "<th scope='row'>".$row['menuName']."</th>";
+                echo "<th scope='row'>".$row['size']."</th>";
+                echo "<th scope='row'>".$row['hotIce']."</th>";
+                echo "<th scope='row'>".$row['price']."</th>";
+                echo "</tr>";
+                echo "</tbody>";
+         }else{
+           break;
+         }
+       }
+           echo "</table>";
+     }
+
+          ?>
+
+
+
 
 </div>
 </div>
