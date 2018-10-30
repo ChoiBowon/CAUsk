@@ -76,7 +76,7 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
      }
      var_dump($category_list[0]);
 
-     while($row = mysqli_fetch_assoc($sql)){
+     while($row = mysqli_fetch_assoc($result)){
        for ($j=0; $j<$numrow; $j++){
          echo "<h2 class='section-title wow fadeInUp' data-wow-duration='1000ms' data-wow-delay='300ms' style='font-family: 'Do Hyeon', sans-serif;'>".$row['category']."</h1>";
 
