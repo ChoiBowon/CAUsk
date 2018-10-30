@@ -91,6 +91,7 @@ var_dump($result);
         echo "</tr>";
         echo "</tbody>";
       }
+    }
             // for ($i = 0 ; $i<count($category_list); $i++){
             //   if ($row[2] == $category_list[$i]){
             //     echo "<tbody>";
