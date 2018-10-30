@@ -4,16 +4,12 @@ session_start();
 
 
 $result = mysqli_query($conn,"SELECT*FROM menu WHERE storeSerial = '".$_SESSION['storeSerial']."'");
-var_dump($result);
+// var_dump($result);
 
 
 $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial = '".$_SESSION['storeSerial']."'");
-var_dump($sql);
-// $sql = mysqli_query($conn, 'SELECT DISTINCT category FROM menu WHERE storeSerial = '.$_SESSION['storeSerial'].'');
-// $result1 = mysqli_query($conn, $sql);
+// var_dump($sql);
 
-// $sql = "SELECT DISTINCT category FROM menu WHERE storeSerial = '.$_SESSION['storeSerial'].'";
-// $sql2 = mysqli_query($conn,$sql);
 
  ?>
 <!DOCTYPE html>
@@ -102,13 +98,14 @@ var_dump($sql);
 
      while($row = mysqli_fetch_assoc($sql)){
        $check = mysqli_query($conn, "SELECT * FROM menu WHERE category = '".$row['category']."'");
+       var_dump($check);
 
        echo "<tbody>";
  echo "<tr>";
- echo "<th scope='row'></th>";
- echo "<th scope='row'></th>";
- echo "<th scope='row'></th>";
- echo "<th scope='row'></th>";
+ echo "<th scope='row'>a</th>";
+ echo "<th scope='row'>b</th>";
+ echo "<th scope='row'>c</th>";
+ echo "<th scope='row'>d</th>";
  echo "</tr>";
  echo "</tbody>";
 
