@@ -102,10 +102,9 @@ require_once("connect.php");
         </table> -->
 
         <div class="row-md-6" >
-            <p style="position:right">
+            <!-- <p style="position:right">
                 <a href="#myModal" id="myBtn" data-toggle="modal" data-target="#myModal" style="font-family: 'Do Hyeon', sans-serif; font-size:20px; margin-left: 1060px;" >메뉴 수정</a>
-                <!-- <button type="button" id="myBtn" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">메뉴 추가</button> -->
-            </p>
+            </p> -->
             <!-- Modal -->
             <div id="myModal" class="dialog" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 dialog-content" style="background: #fbfbfb; box-shadow: 5px 5px grey">
