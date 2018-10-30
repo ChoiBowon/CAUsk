@@ -103,12 +103,10 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
                 echo "<th scope='row'>".$row['price']."</th>";
                 echo "</tr>";
                 echo "</tbody>";
-
-
+         }else{
+           break;
          }
        }
-
-
      }
 
 //      while($row = mysqli_fetch_assoc($sql)){
