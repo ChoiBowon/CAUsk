@@ -97,6 +97,7 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
     //  }
 
      while($row = mysqli_fetch_assoc($sql)){
+       var_dump($row['category']);
        $check = mysqli_query($conn, "SELECT * FROM menu WHERE category = '".$row['category']."'");
        var_dump($check);
 
