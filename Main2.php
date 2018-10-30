@@ -1,7 +1,7 @@
 <?php
 require_once("connect.php");
 session_start();
-$result = mysqli_query($conn,'SELECT*FROM menu WHERE storeSerial = '".$_SESSION['storeSerial']."'');
+$result = mysqli_query($conn,'SELECT*FROM menu WHERE storeSerial = ".$_SESSION['storeSerial']."');
 // $result = mysqli_query($conn,'SELECT*FROM menu');
 
 
