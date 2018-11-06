@@ -261,13 +261,11 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
               </div>
               <div class="dialog-body">
                 <form class="join" action="#" method="post">
-
+                  
                     <div class="form-group">
                     <label for="InputCategory">Category</label>
-                    <div class="row">
-                        <input type="text" class="form-control" name="Category" style="color:#000" placeholder="Category">
+                    <input type="text" class="form-control" name="Category" style="color:#000" value="${data};" placeholder="Category">
                     </div>
-                  </div>
 
                     <div class="form-group">
                       <label for="InputMenu">메뉴이름</label>
