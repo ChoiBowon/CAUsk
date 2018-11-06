@@ -250,7 +250,7 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
 
 
           ?>
-          <div id="menuModal" class="dialog" tabindex="-1" role="dialog" aria-hidden="true">
+          <!-- <div id="menuModal" class="dialog" tabindex="-1" role="dialog" aria-hidden="true">
           <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 dialog-content" style="background: #fbfbfb; box-shadow: 5px 5px grey">
               <div class="dialog-header">
                 <h2 class="dialog-title" id="ModalLongTitle">메뉴를 수정해주세요.</h2>
@@ -355,7 +355,7 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
               </div>
             </form>
           </div>
-      </div>
+      </div> -->
 
 
 
