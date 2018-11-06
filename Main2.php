@@ -292,9 +292,9 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
                  <div class="form-group text-center">
                    <button type="submit" id="submit" class="btn btn-default" >메뉴 저장</button>
                 </div>
-                <div class="form-group text-center">
+                <!-- <div class="form-group text-center">
                   <button type="submit"  class="btn btn-default" >메뉴 저장</button>
-               </div>
+               </div> -->
 
               </div>
             </form>
