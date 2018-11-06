@@ -26,7 +26,7 @@ function closeMenuListener(evt) {
 
 function revisionMenuListener(evt){
   evt.preventDefault();
-  showRevision(false);
+  showRevision(true);
 }
 
 function categoryDirect(){
@@ -63,7 +63,7 @@ function hot(){
 
 document.addEventListener("DOMContentLoaded", function() {
   showChart(false);
-  showRevision(false);
+  
   $("#myBtn").addEventListener("click", addMenuListener);
   $("#close").addEventListener("click", closeMenuListener);
   $("#submit").addEventListener("click", closeMenuListener);
