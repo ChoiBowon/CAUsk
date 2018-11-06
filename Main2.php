@@ -237,7 +237,7 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
      }
 
      if(empty($_GET['idd']) === true || $_GET['idd'] == 100){
-       
+
      }
 
           ?>
