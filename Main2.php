@@ -254,38 +254,18 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
           <div id="menuModal" class="dialog" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 dialog-content" style="background: #fbfbfb; box-shadow: 5px 5px grey">
               <div class="dialog-header">
-                <h2 class="dialog-title" id="ModalLongTitle">메뉴를 추가해주세요.</h2>
-                <button type="button" id="close" class="close" data-dismiss="modal" aria-label="Close">
+                <h2 class="dialog-title" id="ModalLongTitle">메뉴를 수정해주세요.</h2>
+                <button type="button" id="close2" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div class="dialog-body">
-                <form class="join" action="insertmenuprocess.php" method="post">
+                <form class="join" action="#" method="post">
 
                     <div class="form-group">
                     <label for="InputCategory">Category</label>
                     <div class="row">
-                      <div class="col-xs-6 col-sm-6 col-md-6">
                         <input type="text" class="form-control" name="Category" style="color:#000" placeholder="Category">
-                      </div>
-                      <div class="col-xs-6 col-sm-6 col-md-6">
-                        <div class="dropdown" id="mydropdown">
-                          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                            Dropdown
-                            <span class="caret"></span>
-                          </button>
-                          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-                          </ul>
-                        </div>
-
-
-                      </div>
-
-
                     </div>
                   </div>
 
