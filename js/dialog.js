@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
   $("#myBtn").addEventListener("click", addMenuListener);
   $("#close").addEventListener("click", closeMenuListener);
   // $("#submit").addEventListener("click", closeMenuListener);
-  $(".menuBtn").addEventListener("click", revisionMenuListener);
+  $("#menuBtn").addEventListener("click", revisionMenuListener);
   $("#close2").addEventListener("click", closeMenuListener2);
 
 
