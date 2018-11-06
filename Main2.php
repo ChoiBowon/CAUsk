@@ -27,7 +27,7 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
 
 </head>
 <body>
-  <script type="text/javascript" src="js/dialog.js?v=3"></script>
+  <script type="text/javascript" src="js/dialog.js?v=1"></script>
 
     <!-- nav -->
   <nav class="navbar navbar-default" style="background-color : #5DA4BE; height:80px;">
