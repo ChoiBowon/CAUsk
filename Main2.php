@@ -214,7 +214,10 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
 
                echo "<tbody>";
                 echo "<tr>";
-                echo "<th scope='row'>".$row['menuName']."</th>";
+                echo "<th scope='row'>";
+                echo "<a href='Main2.php?idd=".$row['menuSerial']."'>".$row['menuName']."</a>"
+                echo "</th>";
+                // echo "<th scope='row'>".$row['menuName']."</th>";
                 echo "<th scope='row'>".$row['size']."</th>";
                 echo "<th scope='row'>".$row['hotIce']."</th>";
                 echo "<th scope='row'>".$row['price']."</th>";
@@ -225,6 +228,16 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
          }
        }
            echo "</table>";
+     }
+
+     if(empty($_GET['idd'])===false){   // 어떤 메뉴이라도 클릭했을 시 idd 를 받아옴
+       $bno = $_GET['idd'];
+       $result_menu = mysqli_query($conn,'SELECT * FROM menu where menuSerial = '.$bno.'');
+       $result = mysqli_fetch_array($result_menu);
+     }
+
+     if(empty($_GET['idd']) === true || $_GET['idd'] == 100){
+       
      }
 
           ?>
