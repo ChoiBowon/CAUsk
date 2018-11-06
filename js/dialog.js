@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
   showRevision(false);
   $("#myBtn").addEventListener("click", addMenuListener);
   $("#close").addEventListener("click", closeMenuListener);
-  $("#submit").addEventListener("click", closeMenuListener);
+  // $("#submit").addEventListener("click", closeMenuListener);
   $("#menuBtn").addEventListener("click", revisionMenuListener);
 
 
