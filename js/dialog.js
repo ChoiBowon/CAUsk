@@ -22,7 +22,6 @@ function addMenuListener(evt) {
 function closeMenuListener(evt) {
   evt.preventDefault();
     showChart(false);
-    showRevision(false);
 }
 
 function revisionMenuListener(evt){
@@ -30,6 +29,12 @@ function revisionMenuListener(evt){
   console.log("revision")
   showRevision(true);
 }
+
+function closeMenuListener2(evt) {
+  evt.preventDefault();
+    showRevision(false);
+}
+
 
 function categoryDirect(){
   if(document.join.category_selbox.value == 'direct'){
@@ -70,6 +75,8 @@ document.addEventListener("DOMContentLoaded", function() {
   $("#close").addEventListener("click", closeMenuListener);
   // $("#submit").addEventListener("click", closeMenuListener);
   $("#menuBtn").addEventListener("click", revisionMenuListener);
+  $("#close2").addEventListener("click", closeMenuListener2);
+
 
 
 })

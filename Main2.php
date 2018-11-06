@@ -256,7 +256,7 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
           <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 dialog-content" style="background: #fbfbfb; box-shadow: 5px 5px grey">
               <div class="dialog-header">
                 <h2 class="dialog-title" id="ModalLongTitle">메뉴를 수정해주세요.</h2>
-                <button type="button" id="close" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" id="close2" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
