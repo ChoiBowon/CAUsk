@@ -220,7 +220,7 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
                 // echo "</th>";
 
                 echo "<th scope='row'>";
-                echo "<a href='#menuModal' id='menuBtn' data-toggle='modal' data-target='#menuModal'>".$row['menuName']."</a>";
+                echo "<a href='#menuModal' class='menuBtn' data-toggle='modal' data-target='#menuModal'>".$row['menuName']."</a>";
                 echo "</th>";
 
                 // echo "<th scope='row'>".$row['menuName']."</th>";
