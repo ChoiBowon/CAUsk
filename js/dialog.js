@@ -32,6 +32,7 @@ function revisionMenuListener(evt){
 
 function closeMenuListener2(evt) {
   evt.preventDefault();
+  console.log("close1")
     showRevision(false);
 }
 
