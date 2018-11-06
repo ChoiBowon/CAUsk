@@ -264,26 +264,26 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
 
                     <div class="form-group">
                     <label for="InputCategory">Category</label>
-                    <input id="divdata" type="text" class="form-control" name="Category" style="color:#000" value="data"  placeholder="Category">
+                    <input id="divdata" type="text" class="form-control" name="Category" style="color:#000" value="커피"  placeholder="Category">
                     </div>
 
                     <div class="form-group">
                       <label for="InputMenu">메뉴이름</label>
-                      <input type="text" class="form-control" name="MenuName" style="color:#000" placeholder="ex) 아메리카노">
+                      <input type="text" class="form-control" name="MenuName" style="color:#000" value="에스프레소 마끼야또" placeholder="ex) 아메리카노">
                     </div>
 
                     <div class="form-group">
                       <label for="InputSize">size</label>
-                      <input type="text" class="form-control" name="Size" style="color:#000" placeholder="필터링으로 할 예정">
+                      <input type="text" class="form-control" name="Size" style="color:#000" value="ND"  placeholder="필터링으로 할 예정">
                     </div>
                     <div class="form-group">
                       <label for="InputHotIce">hot/ice</label>
-                      <input type="text" class="form-control" name="HOTICE" style="color:#000" placeholder="필터링으로 할 예정">
+                      <input type="text" class="form-control" name="HOTICE" style="color:#000" value="1"  placeholder="필터링으로 할 예정">
                     </div>
 
                     <div class="form-group">
                       <label for="InputPrice">가격</label>
-                      <input type="text" class="form-control" name="Price" style="color:#000" placeholder="ex) 5000원">
+                      <input type="text" class="form-control" name="Price" style="color:#000" value="3800" placeholder="ex) 5000원">
                     </div>
 
               </form>
