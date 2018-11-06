@@ -27,8 +27,8 @@ function closeMenuListener(evt) {
 function revisionMenuListener(evt){
   evt.preventDefault();
   console.log(evt.target.getAttribute("data-id"));
-   var data = "evt.target.getAttribute("data-id")";
-     console.log(var_dump("data"));
+   var data = evt.target.getAttribute("data-id");
+     console.log(data);
   showRevision(true);
 }
 
