@@ -264,7 +264,7 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
 
                     <div class="form-group">
                     <label for="InputCategory">Category</label>
-                    <input type="text" class="form-control" name="Category" style="color:#000" value="data" placeholder="Category">
+                    <input type="text" class="form-control" name="Category" style="color:#000"  placeholder="Category">
                     </div>
 
                     <div class="form-group">
