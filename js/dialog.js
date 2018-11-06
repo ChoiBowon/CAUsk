@@ -22,6 +22,7 @@ function addMenuListener(evt) {
 function closeMenuListener(evt) {
   evt.preventDefault();
     showChart(false);
+    showRevision(false);
 }
 
 function revisionMenuListener(evt){
