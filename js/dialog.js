@@ -4,10 +4,11 @@ function $(id) {
 
 function showChart(isVisible) {
      if(isVisible) $("#myModal").classList.add("visible");
-     else $("#myModal").classList.remove("visible");
+     else if(isVisible) $("menuModal").classList.add("visible");
+     else $("#myModal").classList.remove("visible"); $("#menuModal").classList.remove("visible");
 
-     if(isVisible) $("#menuModal").classList.add("visible");
-     else $("#menuModal").classList.remove("visible");
+    //  if(isVisible) $("#menuModal").classList.add("visible");
+    //  else $("#menuModal").classList.remove("visible");
 }
 
 function addMenuListener(evt) {
