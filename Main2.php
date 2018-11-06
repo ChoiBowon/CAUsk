@@ -236,8 +236,8 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
            echo "</table>";
      }
 
-
-
+     echo "<div id='menuModal' class='dialog' tabindex='-1' role='dialog' aria-hidden='true'>";
+     echo "</div>";
 
 
           ?>
