@@ -214,9 +214,15 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
 
                echo "<tbody>";
                 echo "<tr>";
+                // <a href="#myModal" id="myBtn" data-toggle="modal" data-target="#myModal" style="font-family: 'Do Hyeon', sans-serif; font-size:20px; margin-left: 1060px;" >메뉴 추가</a>
+                // echo "<th scope='row'>";
+                // echo "<a href='Main2.php?idd=".$row['menuSerial']."'>".$row['menuName']."</a>";
+                // echo "</th>";
+
                 echo "<th scope='row'>";
-                echo "<a href='Main2.php?idd=".$row['menuSerial']."'>".$row['menuName']."</a>";
+                echo "<a href='#menuModal' id='myBtn' data-toggle='modal' data-target='#menuModal'>".$row['menuName']."</a>";
                 echo "</th>";
+
                 // echo "<th scope='row'>".$row['menuName']."</th>";
                 echo "<th scope='row'>".$row['size']."</th>";
                 echo "<th scope='row'>".$row['hotIce']."</th>";
@@ -230,17 +236,117 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
            echo "</table>";
      }
 
-     if(empty($_GET['idd'])===false){   // 어떤 메뉴이라도 클릭했을 시 idd 를 받아옴
-       $bno = $_GET['idd'];
-       $result_menu = mysqli_query($conn,'SELECT * FROM menu where menuSerial = '.$bno.'');
-       $result = mysqli_fetch_array($result_menu);
-     }
 
-     if(empty($_GET['idd']) === true || $_GET['idd'] == 100){
 
-     }
+
 
           ?>
+          <div id="menuModal" class="dialog" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 dialog-content" style="background: #fbfbfb; box-shadow: 5px 5px grey">
+              <div class="dialog-header">
+                <h2 class="dialog-title" id="ModalLongTitle">메뉴를 수정해주세요.</h2>
+                <button type="button" id="close" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="dialog-body">
+                <form class="join" name="join" action="insertmenuprocess.php" method="post">
+
+                    <div class="form-group">
+                    <label for="InputCategory">Category</label>
+                    <div class="row">
+                      <div class="col-xs-3 col-sm-3 col-md-3">
+                        <select name="category_selbox" onchange="categoryDirect()">
+                          <option value="none">선택</option>
+                          <option value="커피">커피</option>
+                          <option value="콜드브루">콜드브루</option>
+                          <option value="direct">직접 입력</option>
+                        </select>
+                      </div>
+                      <div class="col-xs-9 col-sm-9 col-md-9">
+                        <input type="text" value="" disabled id="dfdf" class="form-control" name="CategoryDirect" style="color:#000" placeholder="Category">
+                      </div>
+                    </div>
+                  </div>
+
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-xs-3 col-sm-3 col-md-3">
+                            <label for="InputMenu">메뉴이름</label>
+                        </div>
+                        <div class="col-xs-9 col-sm-9 col-md-9">
+                          <input type="text" class="form-control" name="MenuName" style="color:#000" placeholder="ex) 아메리카노">
+
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="form-group">
+                      <label for="InputSize">size</label>
+                      <div class="row">
+                        <div class="col-xs-3 col-sm-3 col-md-3">
+                          <select name="size_selbox" onchange="sizeDirect()">
+                            <option value="none">선택</option>
+                            <option value="tall">Tall</option>
+                            <option value="grande">Grande</option>
+                            <option value="direct">직접 입력</option>
+                          </select>
+                        </div>
+                        <div class="col-xs-9 col-sm-9 col-md-9">
+                          <input type="text" value="" disabled id="selboxDirect" class="form-control" name="SizeDirect" style="color:#000" placeholder="Size">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="InputHotIce">hot / ice</label>
+                      <div class="row">
+                        <div class="col-xs-3 col-sm-3 col-md-3">
+                          <select name="hot_selbox" onchange="hot()">
+                            <option value="none">선택</option>
+                            <option value="hot">Hot only</option>
+                            <option value="ice">Ice only</option>
+                            <option value="hot and ice">둘 다</option>
+                            <option value="not choice">선택 안함</option>
+                          </select>
+                        </div>
+                        <div class="col-xs-9 col-sm-9 col-md-9">
+                          <input type="text" value="" disabled id="selboxDirect" class="form-control" name="hotDirect" style="color:#000" placeholder="Hot or Ice">
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-xs-3 col-sm-3 col-md-3">
+                          <label for="InputPrice">가격</label>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                          <input type="text" class="form-control" name="Price" style="color:#000" placeholder="ex) 5000">
+                        </div>
+                        <div class="col-xs-3 col-sm-3 col-md-3">
+                          <label for="InputPrice">원</label>
+                        </div>
+                      </div>
+
+                    </div>
+
+
+              </div>
+              <div class="dialog-footer">
+                 <!-- <div class="form-group text-center">
+                   <button type="submit" id="submit" class="btn btn-default" >메뉴 저장</button>
+                </div> -->
+                <div class="form-group text-center">
+                  <button type="submit"  class="btn btn-default" >메뉴 저장</button>
+               </div>
+
+              </div>
+            </form>
+          </div>
+      </div>
 
 
 
