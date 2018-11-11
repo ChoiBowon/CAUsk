@@ -246,7 +246,7 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
          }
        }
            echo "</table>";
-           echo "</div>"
+           echo "</div>";
      }
 
 

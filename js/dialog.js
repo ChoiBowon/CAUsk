@@ -26,11 +26,26 @@ function closeMenuListener(evt) {
 
 function revisionMenuListener(evt){
   evt.preventDefault();
+  fillContentOfDialog(evt.target.closest(".menu").firstElementChild.innerHTML, evt.target.closest("tr").children);
   console.log(evt.target.getAttribute("data-id"));
   var data = evt.target.getAttribute("data-id");
   console.log(data);
   document.getElementById("divdata").innerHTML=data;
   showRevision(true);
+}
+
+function fillContentOfDialog(menuName, contents) {
+    console.log(menuName)
+    console.log(contents[0].firstElementChild);
+    console.log(contents[1]);
+    console.log(contents[2]);
+    console.log(contents[3]);
+
+    $("#menuModal").firstElementChild.children[1].firstElementChild.children[0].lastElementChild.value = menuName
+    $("#menuModal").firstElementChild.children[1].firstElementChild.children[1].lastElementChild.value = contents[0].firstElementChild.innerText
+    $("#menuModal").firstElementChild.children[1].firstElementChild.children[2].lastElementChild.value = contents[1].innerText
+    $("#menuModal").firstElementChild.children[1].firstElementChild.children[3].lastElementChild.value = contents[2].innerText
+    $("#menuModal").firstElementChild.children[1].firstElementChild.children[4].lastElementChild.value = contents[3].innerText
 }
 
 function closeMenuListener2(evt) {
