@@ -197,6 +197,7 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
 
 
        for ($j=0; $j<$numrow; $j++){
+         echo "<div class='menu'>";
          echo "<h2 data-wow-duration='1000ms' data-wow-delay='300ms' style='font-family: 'Do Hyeon', sans-serif;'>".$category_list[$j]."</h2>";
          echo "<table class='table table-bordered'  style='font-family: 'Do Hyeon', sans-serif;'>
              <thead>
@@ -245,6 +246,7 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
          }
        }
            echo "</table>";
+           echo "</div>"
      }
 
 
