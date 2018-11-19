@@ -68,9 +68,9 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
           echo "<div class='team-content'>";
           echo "<h4>주문자 : ".$row['userId']."</h4>";
           echo "<h6>".$row['time']."</h6>";
-          echo "<h4>주문메뉴 : "$row['menuName']."</h4>";
-          echo "<h4>Hot/ICE : "$row['hotIce']."</h4>";
-          echo "<h4>Size : "$row['size']."</h4>";
+          echo "<h4>주문메뉴 : ".$row['menuName']."</h4>";
+          echo "<h4>Hot/ICE : ".$row['hotIce']."</h4>";
+          echo "<h4>Size : ".$row['size']."</h4>";
           // echo "<p>".$row['content']."</p>";
           // echo "<ul class='team-social'>
           //     <li><form action='#' method='get'>
