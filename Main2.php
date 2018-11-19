@@ -71,7 +71,15 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
 
           echo "<h6>".$row['time']."</h6>";
           echo "<h4>주문메뉴 : ".$row['menuName']."</h4>";
-          echo "<h4 style='font-family: 'Nanum Gothic', sans-serif;'>Hot/ICE : ".$row['hotIce']."</h4>";
+
+          if ($row['hotIce'] == 0){
+            $HotIce = 'hot';
+          }elseif ($row['hotIce'] == 1) {
+            $HotIce = 'ice';
+          }else{
+            $HotIce = null;
+          }
+          echo "<h4 style='font-family: 'Nanum Gothic', sans-serif;'>Hot/Ice : ".$HotIce."</h4>";
           echo "<h4 style='font-family: 'Nanum Gothic', sans-serif;'>Size : ".$row['size']."</h4>";
           // echo "<p>".$row['content']."</p>";
           // echo "<ul class='team-social'>
@@ -219,8 +227,6 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
       $category_list[$i]= $row['category'];
       ++$i;
     }
-
-    //  var_dump($category_list);
 
 
        for ($j=0; $j<$numrow; $j++){
