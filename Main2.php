@@ -89,7 +89,7 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
           //     <input type='hidden' name='menteeapply' value='".$row['name']."'></form>
           //     </li>
           //     </ul>";
-          echo "<button type='button'>완료!</button>";
+          echo "<button type='button' class='btn btn-info'>완료!</button>";
               echo "</div>";
 
               echo "</div>";
