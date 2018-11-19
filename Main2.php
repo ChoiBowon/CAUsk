@@ -134,11 +134,7 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
                 echo "<h4 style='font-family: 'Nanum Gothic', sans-serif;'>Hot/Ice : ".$HotIce."</h4>";
                 echo "<h4 style='font-family: 'Nanum Gothic', sans-serif;'>Size : ".$row['size']."</h4>";
                 echo "<h4 style='font-family: 'Nanum Gothic', sans-serif;'>Price : ".$row['price']."</h4>";
-                echo"<form action='completeprocess.php' method='post'>";
-                echo"<input type='submit' class='btn btn-info' value='완료!' >";
-                echo"<input type='hidden' name='orderSerial' value='".$row['orderSerial']."'>";
-                echo"</form>";
-                // echo "<button type='button' id='complete' class='btn btn-info'>완료!</button>";
+                
                 echo "</div>";
                 echo "</div>";
                 echo "</div>";
