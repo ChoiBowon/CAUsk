@@ -83,12 +83,14 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
           echo "<h4 style='font-family: 'Nanum Gothic', sans-serif;'>Hot/Ice : ".$HotIce."</h4>";
           echo "<h4 style='font-family: 'Nanum Gothic', sans-serif;'>Size : ".$row['size']."</h4>";
           // echo "<p>".$row['content']."</p>";
-          echo "<ul class='team-social'>
-              <li><form action='#' method='get'>
-              <input type='submit' value='Apply'rel='nofollow' class='btn btn-common wow fadeInUp' data-wow-duration='1000ms' data-wow-delay='400ms'>
-              <input type='hidden' name='menteeapply' value='".$row['menuName']."'></form>
-              </li>
-              </ul>";
+          // echo "<ul class='team-social'>
+          //     <li><form action='#' method='get'>
+          //     <input type='submit' value='Apply'rel='nofollow' class='btn btn-common wow fadeInUp' data-wow-duration='1000ms' data-wow-delay='400ms'>
+          //     <input type='hidden' name='menteeapply' value='".$row['menuName']."'></form>
+          //     </li>
+          //     </ul>";
+          echo "<button type='button' id='Btn' class='btn btn-info btn-lg'>완료!</button>";
+
               echo "</div>";
 
               echo "</div>";
