@@ -258,7 +258,15 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
 
                 // echo "<th scope='row'>".$row['menuName']."</th>";
                 echo "<th scope='row'>".$row['size']."</th>";
-                echo "<th scope='row'>".$row['hotIce']."</th>";
+                if ($row['hotIce'] == 0){
+                  $HotIce = 'hot';
+                }elseif ($row['hotIce'] == 1) {
+                  $HotIce = 'ice';
+                }else{
+                  $HotIce = null;
+                }
+                // echo "<th scope='row'>".$row['hotIce']."</th>";
+                echo "<th scope='row'>".$HotIce."</th>";
                 echo "<th scope='row'>".$row['price']."</th>";
                 echo "</tr>";
                 echo "</tbody>";
