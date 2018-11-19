@@ -93,7 +93,7 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
           //     </ul>";
           echo"<form action='completeprocess.php' method='post'>";
           echo"<input type='submit' value='완료!' >";
-          echo"<input type='hidden' name='orderSerial' value=".$row['orderSerial'].">";
+          echo"<input type='hidden' name='orderSerial' value='".$row['orderSerial']."'>";
           echo"</form>";
           // echo "<button type='button' id='complete' class='btn btn-info'>완료!</button>";
           echo "</div>";
