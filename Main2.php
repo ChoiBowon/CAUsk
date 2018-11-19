@@ -20,6 +20,7 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="bootstrap.css">
     <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:700" rel="stylesheet">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" href="dialog.css?v=3">
@@ -66,11 +67,11 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
           echo "<div class='col-md-4 col-sm-6 col-xs-12'>";
           echo "<div class='single-team wow fadeInLeft' data-wow-duration='1000ms' data-wow-delay='400ms'>";
           echo "<div class='team-content'>";
-          echo "<h4>주문자 : ".$row['userId']."</h4>";
+          echo "<h4 style:'font-family: 'Nanum Gothic', sans-serif'>주문자 : ".$row['userId']."</h4>";
           echo "<h6>".$row['time']."</h6>";
-          echo "<h4>주문메뉴 : ".$row['menuName']."</h4>";
-          echo "<h4>Hot/ICE : ".$row['hotIce']."</h4>";
-          echo "<h4>Size : ".$row['size']."</h4>";
+          echo "<h4 style:'font-family: 'Nanum Gothic', sans-serif'>주문메뉴 : ".$row['menuName']."</h4>";
+          echo "<h4 style:'font-family: 'Nanum Gothic', sans-serif'>Hot/ICE : ".$row['hotIce']."</h4>";
+          echo "<h4 style:'font-family: 'Nanum Gothic', sans-serif'>Size : ".$row['size']."</h4>";
           // echo "<p>".$row['content']."</p>";
           // echo "<ul class='team-social'>
           //     <li><form action='#' method='get'>
