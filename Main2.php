@@ -70,7 +70,7 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
           echo "<h4 style='font-family: 'Nanum Gothic', sans-serif;'>주문자 : ".$row['userId']."</h4>";
 
           echo "<h6>".$row['time']."</h6>";
-          echo "<br>"
+          echo "<br>";
           echo "<h4>주문메뉴 : ".$row['menuName']."</h4>";
 
           if ($row['hotIce'] == 0){
@@ -86,10 +86,10 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
           // echo "<ul class='team-social'>
           //     <li><form action='#' method='get'>
           //     <input type='submit' value='Apply'rel='nofollow' class='btn btn-common wow fadeInUp' data-wow-duration='1000ms' data-wow-delay='400ms'>
-          //     <input type='hidden' name='menteeapply' value='".$row['menuName']."'></form>
+          //     <input type='hidden' name='menteeapply' value='".$row['name']."'></form>
           //     </li>
           //     </ul>";
-          // echo "<button type='button' id='Btn' class='btn btn-info btn-lg'>완료!</button>";
+          echo "<button type='button'>완료!</button>";
               echo "</div>";
 
               echo "</div>";
