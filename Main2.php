@@ -63,42 +63,37 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
     <div class="row">
           <?php
           while( $row = mysqli_fetch_assoc($order)){
+            if ($row['complete']== 0){
+              echo "<div class='col-md-4 col-sm-6 col-xs-12'>";
+              echo "<div class='single-team wow fadeInLeft' data-wow-duration='1000ms' data-wow-delay='400ms'>";
+              echo "<div class='team-content' style='font-family: 'Do Hyeon', sans-serif;'>";
+              echo "<h4 style='font-family: 'Nanum Gothic', sans-serif;'>주문자 : ".$row['userId']."</h4>";
+
+              echo "<h6>".$row['time']."</h6>";
+              echo "<h4>주문메뉴 : ".$row['menuName']."</h4>";
+
+              if ($row['hotIce'] == 0){
+                $HotIce = 'hot';
+              }elseif ($row['hotIce'] == 1) {
+                $HotIce = 'ice';
+              }else{
+                $HotIce = null;
+              }
+
+              echo "<h4 style='font-family: 'Nanum Gothic', sans-serif;'>Hot/Ice : ".$HotIce."</h4>";
+              echo "<h4 style='font-family: 'Nanum Gothic', sans-serif;'>Size : ".$row['size']."</h4>";
+              echo "<h4 style='font-family: 'Nanum Gothic', sans-serif;'>Price : ".$row['price']."</h4>";
+              echo"<form action='completeprocess.php' method='post'>";
+              echo"<input type='submit' class='btn btn-info' value='완료!' >";
+              echo"<input type='hidden' name='orderSerial' value='".$row['orderSerial']."'>";
+              echo"</form>";
+              // echo "<button type='button' id='complete' class='btn btn-info'>완료!</button>";
+              echo "</div>";
+              echo "</div>";
+              echo "</div>";
+            }
           //      if(empty($_GET['category']) == true) {
-          echo "<div class='col-md-4 col-sm-6 col-xs-12'>";
-          echo "<div class='single-team wow fadeInLeft' data-wow-duration='1000ms' data-wow-delay='400ms'>";
-          echo "<div class='team-content' style='font-family: 'Do Hyeon', sans-serif;'>";
-          echo "<h4 style='font-family: 'Nanum Gothic', sans-serif;'>주문자 : ".$row['userId']."</h4>";
 
-          echo "<h6>".$row['time']."</h6>";
-          echo "<h4>주문메뉴 : ".$row['menuName']."</h4>";
-
-          if ($row['hotIce'] == 0){
-            $HotIce = 'hot';
-          }elseif ($row['hotIce'] == 1) {
-            $HotIce = 'ice';
-          }else{
-            $HotIce = null;
-          }
-
-          echo "<h4 style='font-family: 'Nanum Gothic', sans-serif;'>Hot/Ice : ".$HotIce."</h4>";
-          echo "<h4 style='font-family: 'Nanum Gothic', sans-serif;'>Size : ".$row['size']."</h4>";
-          echo "<h4 style='font-family: 'Nanum Gothic', sans-serif;'>Price : ".$row['price']."</h4>";
-
-          // echo "<p>".$row['content']."</p>";
-          // echo "<ul class='team-social'>
-          //     <li><form action='#' method='get'>
-          //     <input type='submit' value='Apply'rel='nofollow' class='btn btn-common wow fadeInUp' data-wow-duration='1000ms' data-wow-delay='400ms'>
-          //     <input type='hidden' name='menteeapply' value='".$row['name']."'></form>
-          //     </li>
-          //     </ul>";
-          echo"<form action='completeprocess.php' method='post'>";
-          echo"<input type='submit' value='완료!' >";
-          echo"<input type='hidden' name='orderSerial' value='".$row['orderSerial']."'>";
-          echo"</form>";
-          // echo "<button type='button' id='complete' class='btn btn-info'>완료!</button>";
-          echo "</div>";
-          echo "</div>";
-          echo "</div>";
           }
            ?>
            <br>
