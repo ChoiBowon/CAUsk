@@ -15,6 +15,6 @@ $result=mysqli_query($conn, $sql);
 
  echo ("<script>alert('주문 완료 처리되었습니다!');history.go(-1);</script>");
 
- header("Location:Mentoring.php");
+ header("Location:Main2.php");
 
 ?>
