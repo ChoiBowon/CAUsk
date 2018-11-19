@@ -1,6 +1,5 @@
 <?php
-header("Content-Type:text/html;charset=utf-8");
-session_start();
+// session_start();
 require_once("connect.php");
 
  // $result = mysqli_query($conn, "SELECT * FROM matching");
@@ -10,7 +9,9 @@ require_once("connect.php");
  $orderSerial = $_POST['orderSerial'];
 
  // $bool=TRUE;
- $sql= mysqli_query($conn, "UPDATE causk.order SET complete=1 WHERE orderSerial='".$orderSerial."');
+ $sql="UPDATE causk.order SET complete=1 WHERE orderSerial='".$orderSerial."'";
+
+$result=mysqli_query($conn, $sql);
 
  echo ("<script>alert('주문 완료 처리되었습니다!');history.go(-1);</script>");
 
