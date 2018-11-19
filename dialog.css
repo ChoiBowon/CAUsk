@@ -47,3 +47,15 @@
 .visible{
     display: block;
 }
+
+.single-team {
+    background: #f6f6f6;
+    border: 1px solid #f6f6f6;
+    text-align: center;
+    padding: 10px;
+    overflow: hidden;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
