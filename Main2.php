@@ -67,11 +67,12 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
           echo "<div class='col-md-4 col-sm-6 col-xs-12'>";
           echo "<div class='single-team wow fadeInLeft' data-wow-duration='1000ms' data-wow-delay='400ms'>";
           echo "<div class='team-content'>";
-          echo "<h4 style:'font-family: 'Nanum Gothic', sans-serif'>주문자 : ".$row['userId']."</h4>";
+          echo "<h4 style='font-family: 'Nanum Gothic', sans-serif;'>주문자 : ".$row['userId']."</h4>";
+
           echo "<h6>".$row['time']."</h6>";
-          echo "<h4 style:'font-family: 'Nanum Gothic', sans-serif'>주문메뉴 : ".$row['menuName']."</h4>";
-          echo "<h4 style:'font-family: 'Nanum Gothic', sans-serif'>Hot/ICE : ".$row['hotIce']."</h4>";
-          echo "<h4 style:'font-family: 'Nanum Gothic', sans-serif'>Size : ".$row['size']."</h4>";
+          echo "<h4 style='font-family: 'Nanum Gothic', sans-serif;'>주문메뉴 : ".$row['menuName']."</h4>";
+          echo "<h4 style='font-family: 'Nanum Gothic', sans-serif;'>Hot/ICE : ".$row['hotIce']."</h4>";
+          echo "<h4 style='font-family: 'Nanum Gothic', sans-serif;'>Size : ".$row['size']."</h4>";
           // echo "<p>".$row['content']."</p>";
           // echo "<ul class='team-social'>
           //     <li><form action='#' method='get'>
