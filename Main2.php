@@ -6,7 +6,7 @@ session_start();
 $result = mysqli_query($conn,"SELECT*FROM menu WHERE storeSerial = '".$_SESSION['storeSerial']."'");
 // var_dump($result);
 
-
+$order = mysqli_query($conn,"SELECT*FROM causk.order WHERE storeName = '".$_SESSION['storeName']."'");
 $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial = '".$_SESSION['storeSerial']."'");
 // var_dump($sql);
 
@@ -58,6 +58,31 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
   <!-- 주문현황 -->
     <div class="section-header">
         <h1 class="section-title wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms" style="font-family: 'Do Hyeon', sans-serif;">주문 현황</h1>
+    </div>
+    <div class="row">
+          <?php
+          while( $row = mysqli_fetch_assoc($order)){
+          //      if(empty($_GET['category']) == true) {
+          echo "<div class='col-md-4 col-sm-6 col-xs-12'>";
+          echo "<div class='single-team wow fadeInLeft' data-wow-duration='1000ms' data-wow-delay='400ms'>";
+          echo "<div class='team-content'>";
+          echo "<h4>".$row['userId']."</h4>";
+          echo "<h6>".$row['time']."</h6>";
+          // echo "<p>".$row['content']."</p>";
+          // echo "<ul class='team-social'>
+          //     <li><form action='#' method='get'>
+          //     <input type='submit' value='Apply'rel='nofollow' class='btn btn-common wow fadeInUp' data-wow-duration='1000ms' data-wow-delay='400ms'>
+          //     <input type='hidden' name='menteeapply' value='".$row['name']."'></form>
+          //     </li>
+          //     </ul>";
+              echo "</div>";
+
+              echo "</div>";
+              echo "</div>";
+          }
+           ?>
+           <br>
+      </form>
     </div>
 
     <br>
@@ -230,17 +255,6 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
                 echo "</tr>";
                 echo "</tbody>";
 
-                // echo "<div id='menuModal' class='dialog' tabindex='-1' role='dialog' aria-hidden='true'>";
-                // echo "<div class='col-lg-8 col-md-8 col-sm-8 col-xs-8 dialog-content' style='background: #fbfbfb; box-shadow: 5px 5px grey'>";
-                // echo "<div class='dialog-header'>";
-                // echo "<h2 class='dialog-title' id='ModalLongTitle'>메뉴를 수정해주세요.</h2>";
-                // echo "</div>";
-                // echo "<div class='dialog-body'>";
-                // echo "</div>";
-                // echo "<div class='dialog-footer'>";
-                // echo "</div>";
-                // echo "</div>";
-                // echo "</div>";
          }else{
            break;
          }
