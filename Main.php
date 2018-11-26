@@ -15,6 +15,62 @@ require_once("connect.php");
     <link rel="stylesheet" href="dialog.css?v=1">
     <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
     <script type="text/javascript" src="app.js"></script>
+    <script>
+
+    var {google} = require('googleapis');
+    var MESSAGING_SCOPE = 'https://www.googleapis.com/auth/firebase.messaging';
+    var SCOPES = [MESSAGING_SCOPE];
+    function getAccessToken() {
+        return new Promise(function(resolve, reject) {
+            var key = require('./service-account.json');
+            var jwtClient = new google.auth.JWT(
+                key.client_email,
+                null,
+                key.private_key,
+                SCOPES,
+                null
+            );
+            jwtClient.authorize(function(err, tokens) {
+                if (err) {
+                    reject(err);
+                    return;
+                }
+                resolve(tokens.access_token);
+            });
+       });
+    }
+    var PROJECT_ID = 'causk-16a1b';
+    var HOST = 'fcm.googleapis.com';
+    var PATH = '/v1/projects/' + PROJECT_ID + '/messages:send';
+    function sendFcmMessage(fcmMessage) {
+        getAccessToken().then(function(accessToken) {
+            var options = {
+                hostname: HOST,
+                path: PATH,
+                method: 'POST',
+                headers: {
+                    'Authorization': 'Bearer ' + accessToken
+                }
+                // … plus the body of your notification or data message
+            };
+            var request = https.request(options, function(resp) {
+                resp.setEncoding('utf8');
+                resp.on('data', function(data) {
+                    console.log('Message sent to Firebase for delivery, response:');
+                    console.log(data);
+                });
+            });
+            request.on('error', function(err) {
+                console.log('Unable to send message to Firebase');
+                console.log(err);
+            });
+            request.write(JSON.stringify(fcmMessage));
+            request.end();
+        });
+    }
+
+    </script>
+
 
 
 
