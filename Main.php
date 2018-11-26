@@ -4,6 +4,7 @@ require_once("connect.php");
  ?>
 <!DOCTYPE html>
 <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+
 <script>
   // Initialize Firebase
   var config = {
@@ -29,7 +30,7 @@ require_once("connect.php");
     console.log('Error Occured');
 
   })
-messaging.onMessaging(function(payload){
+messaging.onMessage(function(payload){
   console.log('on Message: ', payload);
 });
 
