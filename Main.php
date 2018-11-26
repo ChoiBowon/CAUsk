@@ -12,7 +12,7 @@ require_once("connect.php");
     authDomain: "causk-16a1b.firebaseapp.com",
     databaseURL: "https://causk-16a1b.firebaseio.com",
     projectId: "causk-16a1b",
-    storageBucket: "",
+    storageBucket: "causk-16a1b.appspot.com",
     messagingSenderId: "843739767329"
   };
   firebase.initializeApp(config);
