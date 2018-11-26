@@ -2,39 +2,7 @@
 require_once("connect.php");
 // $result = mysqli_query($conn,'SELECT*FROM menu');
  ?>
-<!DOCTYPE html>
-<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
 
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyA55pkgysAfPFIETtD-eMPn0ORPN4LVmec",
-    authDomain: "causk-16a1b.firebaseapp.com",
-    databaseURL: "https://causk-16a1b.firebaseio.com",
-    projectId: "causk-16a1b",
-    storageBucket: "causk-16a1b.appspot.com",
-    messagingSenderId: "843739767329"
-  };
-  firebase.initializeApp(config);
-
-  const messaging = firebase.messaging();
-  messaging.requestPermission()
-  .then(function(){
-    console.log('Have Permission');
-    return messaging.getToken();
-  })
-  .then(function(token){
-    console.log(token);
-  })
-  .catch(function(err){
-    console.log('Error Occured', err);
-  })
-
-messaging.onMessage(function(payload){
-  console.log('on Message: ', payload);
-});
-
-</script>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -45,6 +13,8 @@ messaging.onMessage(function(payload){
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="dialog.css?v=1">
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+
 
 
 </head>
