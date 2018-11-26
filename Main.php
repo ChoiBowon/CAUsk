@@ -4,6 +4,7 @@ require_once("connect.php");
  ?>
 <!DOCTYPE html>
 <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+<script type="text/javascript" src="firebase-messaging-sw.js"></script>
 
 <script>
   // Initialize Firebase
