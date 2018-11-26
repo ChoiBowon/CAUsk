@@ -4,7 +4,6 @@ require_once("connect.php");
  ?>
 <!DOCTYPE html>
 <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
-
 <script>
   // Initialize Firebase
   var config = {
@@ -21,11 +20,19 @@ require_once("connect.php");
   messaging.requestPermission()
   .then(function(){
     console.log('Have Permission');
+    return messaging.getToken();
+  })
+  .then(function(token){
+    console.log(token);
   })
   .catch(function(err){
     console.log('Error Occured');
 
   })
+messaging.onMessaging(function(payload){
+  console.log('on Message: ', payload);
+});
+
 </script>
 <html lang="en">
 <head>
