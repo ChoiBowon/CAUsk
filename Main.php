@@ -3,6 +3,30 @@ require_once("connect.php");
 // $result = mysqli_query($conn,'SELECT*FROM menu');
  ?>
 <!DOCTYPE html>
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA55pkgysAfPFIETtD-eMPn0ORPN4LVmec",
+    authDomain: "causk-16a1b.firebaseapp.com",
+    databaseURL: "https://causk-16a1b.firebaseio.com",
+    projectId: "causk-16a1b",
+    storageBucket: "",
+    messagingSenderId: "843739767329"
+  };
+  firebase.initializeApp(config);
+
+  const messaging = firebase.messaging();
+  messaging.requestPermission()
+  .then(function(){
+    console.log('Have Permission');
+  })
+  .catch(function(err){
+    console.log('Error Occured');
+
+  })
+</script>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
