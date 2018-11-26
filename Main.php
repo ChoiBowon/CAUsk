@@ -2,7 +2,7 @@
 require_once("connect.php");
 // $result = mysqli_query($conn,'SELECT*FROM menu');
  ?>
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
