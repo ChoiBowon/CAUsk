@@ -1,6 +1,7 @@
+if(typeof importScripts == "function") {
+// web worker scope
 importScripts('https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js');
 importScripts('https://www.gstatic.com/firebasejs/5.5.2/firebase-messaging.js');
-
 
 var config = {
     apiKey: "AIzaSyA55pkgysAfPFIETtD-eMPn0ORPN4LVmec",
@@ -13,3 +14,7 @@ var config = {
   firebase.initializeApp(config);
 
 const messaging = firebase.messaging();
+}
+else {
+// not web worker scope, assume window scope
+}
