@@ -14,6 +14,8 @@ require_once("connect.php");
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="dialog.css?v=1">
     <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+
 
 
 
