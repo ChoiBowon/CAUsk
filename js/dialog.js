@@ -30,7 +30,7 @@ function revisionMenuListener(evt){
   console.log(evt.target.getAttribute("data-id"));
   var data = evt.target.getAttribute("data-id");
   console.log(data);
-  document.getElementById("divdata").innerHTML=data;
+  document.getElementById("menuSerial").value=data;
   showRevision(true);
 }
 

@@ -6,7 +6,8 @@ session_start();
 $result = mysqli_query($conn,"SELECT*FROM menu WHERE storeSerial = '".$_SESSION['storeSerial']."'");
 // var_dump($result);
 
-$order = mysqli_query($conn,"SELECT*FROM causk.order WHERE storeName = '".$_SESSION['storeName']."'");
+$order = mysqli_query($conn,"SELECT*FROM causk.order WHERE storeName = '".$_SESSION['storeName']."' and complete = 0");
+$completed = mysqli_query($conn, "SELECT*FROM causk.order WHERE storeName = '".$_SESSION['storeName']."' and complete = 1 order by completedTime desc");
 $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial = '".$_SESSION['storeSerial']."'");
 // var_dump($sql);
 
@@ -24,7 +25,94 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" href="dialog.css?v=4">
+    <!--script type="text/javascript" src="firebase-messaging-sw.js"></script-->
+    <!--script type="text/javascript" src="app.js"></script-->
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+    <link rel="manifest" href="manifest.json">
 
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA55pkgysAfPFIETtD-eMPn0ORPN4LVmec",
+    authDomain: "causk-16a1b.firebaseapp.com",
+    databaseURL: "https://causk-16a1b.firebaseio.com",
+    projectId: "causk-16a1b",
+    storageBucket: "causk-16a1b.appspot.com",
+    messagingSenderId: "843739767329"
+  };
+firebase.initializeApp(config);
+var database = firebase.database();
+var valRef = database.ref().child('message');
+valRef.once('value', function(snapshot){
+	console.log('key:' + JSON.stringify(snapshot.key));
+	console.log('val:' + JSON.stringify(snapshot.val()));
+	console.log('numChildren:' + JSON.stringify(snapshot.numChildren()));
+	snapshot.forEach(function(item){
+		console.log(JSON.stringify(item.val()));
+	})
+})
+
+valRef.on('child_added',function(snapshot){
+	console.log('[child_added] key:' + snapshot.key);
+	console.log('[child_added] val:' + JSON.stringify(snapshot.val()));
+})
+
+const messaging = firebase.messaging();
+messaging.requestPermission()
+.then(function(){
+	console.log('Have Permission');
+	if(isTokenSentToServer()){
+		console.log('Token already saved.')
+	}else{
+		getRegToken();
+	}
+	getRegToken();
+
+  //return messaging.getToken();
+})
+//.then(function(token){
+  //console.log(token);
+//})
+.catch(function(err){
+  console.log('Error Occured', err);
+});
+
+function getRegToken(argument){
+	messaging.getToken()
+		.then(function(currentToken){
+		if(currentToken){
+			//sendTokenToServer(currentToken);
+			console.log(currentToken);
+			setTokenSentToServer(true);
+		}else{
+			console.log('No Instance ID token avialable.');
+			setTokenSentToServer(false);
+		}
+})
+	.catch(function(err){
+		console.log('An error occurred while retrieving token.', err);
+		showToken('Error retrieving Instance ID token.',err);
+		setTokenSentToServer(false);
+	});
+}
+
+function setTokenSentToServer(sent){
+	window.localStorage.setItem('sentToServer', sent ? 1 : 0);
+}
+
+function isTokenSentToServer(){
+	return window.localStorage.getItem('sentToServer') == 1;
+}
+messaging.onMessage(function(payLoad){
+	console.log('Message Received' , payLoad);
+	notificationTitle = payLoad.data.title;
+	notificationOptions = {
+		body: payLoad.data.body
+		//icon:payload.data.icon
+	};
+	var notification = new Notification(notificationTitle, notificationOptions);
+});
+</script>
 
 </head>
 <body>
@@ -64,7 +152,6 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
           <?php
           $index = 0;
           while( $row = mysqli_fetch_assoc($order)){
-            if ($row['complete']== 0){
               echo "<div class='col-md-4 col-sm-6 col-xs-12'>";
               echo "<div class='single-team wow fadeInLeft' data-wow-duration='1000ms' data-wow-delay='400ms'>";
               echo "<div class='team-content' style='font-family: 'Do Hyeon', sans-serif;'>";
@@ -92,13 +179,9 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
               echo "</div>";
               echo "</div>";
               echo "</div>";
-            } else {
-              $completed[$index] = $row;
-              $index = $index + 1;
             }
           //      if(empty($_GET['category']) == true) {
 
-          }
            ?>
       </form>
     </div>
@@ -110,17 +193,17 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
           <h1 class="section-title wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms" style="font-family: 'Do Hyeon', sans-serif;">주문완료 현황</h1>
       </div>
       <div class="row">
-            <?php
-            $current = 0;
-            while( $current < $index ){
-              $row = $completed[$current];
-              $current = $current + 1;
+	<?php
+	$limit = 6;
+	    while( $row = mysqli_fetch_assoc($completed)){
+
                 echo "<div class='col-md-4 col-sm-6 col-xs-12'>";
                 echo "<div class='single-team wow fadeInLeft' data-wow-duration='1000ms' data-wow-delay='400ms'>";
                 echo "<div class='team-content' style='font-family: 'Do Hyeon', sans-serif;'>";
                 echo "<h4 style='font-family: 'Nanum Gothic', sans-serif;'>주문자 : ".$row['userId']."</h4>";
 
-                echo "<h6>".$row['time']."</h6>";
+                echo "<h6>주문시간 : ".$row['time']."</h6>";
+                echo "<h6>주문완료 : ".$row['completedTime']."</h6>";
                 echo "<h4>주문메뉴 : ".$row['menuName']."</h4>";
 
                 if ($row['hotIce'] == 0){
@@ -137,7 +220,12 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
                 
                 echo "</div>";
                 echo "</div>";
-                echo "</div>";
+		echo "</div>";
+
+		$limit = $limit - 1;
+		if($limit == 0){
+			break;
+		}
               }
              ?>
         </form>
@@ -335,10 +423,10 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
                 </button>
               </div>
               <div  class="dialog-body">
-                <form class="join" action="#" method="post">
+                <form class="join" action="editprocess.php" method="post">
 
                     <div class="form-group">
-                    <label for="InputCategory">Category</label>
+		    <label for="InputCategory">Category</label>
                     <input id="divdata" type="text" class="form-control" name="Category" style="color:#000" value="커피"  placeholder="Category">
                     </div>
 
@@ -361,7 +449,10 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
                       <input type="text" class="form-control" name="Price" style="color:#000" value="3800" placeholder="ex) 5000원">
                     </div>
 
-              </form>
+                    <div class="form-group">
+                      <input id="menuSerial" type="hidden" class="form-control" name="menuSerial" style="color:#000" value="">
+                    </div>
+
               </div>
               <div class="dialog-footer">
                  <div class="form-group text-center">
@@ -385,7 +476,7 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
 
         <div class="panel-footer" style="background-color : #5DA4BE; color:#FFFF; text-align:center;
 
-        bottom:0; width:100%;">Made by 2018 CAUsk team</div>
+         width:100%;">Made by 2018 CAUsk team</div>
     </div>
 
 

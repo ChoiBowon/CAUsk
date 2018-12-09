@@ -53,6 +53,7 @@
     border: 1px solid #f6f6f6;
     text-align: center;
     padding: 10px;
+    margin: 5px;
     overflow: hidden;
     -webkit-transition: all 0.2s linear;
     -moz-transition: all 0.2s linear;

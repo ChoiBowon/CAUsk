@@ -65,7 +65,7 @@
 
         <div class="panel-footer" style="background-color : #5DA4BE; color:#FFFF; text-align:center; position:absolute;
 
-        bottom:0; width:100%;">Made by 2018 CAUsk team</div>
+        bottom:0;  width:100%;">Made by 2018 CAUsk team</div>
     </div>
 
   </body>

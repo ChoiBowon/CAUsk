@@ -6,8 +6,33 @@ require_once("connect.php");
  $memberPw = $_POST['Password'];
  $memberPw2 = $_POST['Password2'];
  $memberStoreName = $_POST['Store_Name'];
- $memberPlace = $_POST['Place'];
+ $memberPlace = $_POST['roadAddress'];
  $memberPhoneNum = $_POST['PhoneNum'];
+ $memberPointX = $_POST['pointX'];
+ $memberPointY = $_POST['pointY'];
+
+//$sGoogleMapApi = "http://maps.googleapis.com/maps/api/geocode/xml?address=".urlencode($memberPlace)."&sensor=true_or_false" ;
+//$budget74 = simplexml_load_file($sGoogleMapApi);
+
+//if($budget74->status!='OK') die("구글맵API에서 주소에 대한 좌표를 받아 오는데 실패하였습니다!");
+
+//$lat = $budget74->result->geometry->location->lat;
+
+ //$lng = $budget74->result->geometry->location->lng;
+
+ //echo("<script src=\"https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js\"></script>");
+ /*echo("<script type=\"text/javascript\" src=\"//dapi.kakao.com/v2/maps/sdk.js?appkey=b36d32178aeff64f0c2873b5419d4863&libraries=services\"></script>");
+ echo ("<script>;
+ var geocoder = new daum.maps.services.Geocoder();
+
+ var callback = function(result, status) {
+    if (status === daum.maps.services.Status.OK) {
+        console.log(result);
+    }
+};
+geocoder.addressSearch('".$memberPlace."', callback);
+</script>");*/
+//"lat:{$lat}, lng:{$lng}");
 
  //PHP에서 유효성 재확인
 
@@ -43,16 +68,15 @@ exit;
 
 
  // $sql="INSERT INTO store (id,password,storeName,place,tel) VALUES('".$_POST['Id']."','".$_POST['Password']."','".$_POST['Store_Name']."','".$_POST['Place']."','".$_POST['PhoneNum']."')";
- $sql="INSERT INTO store (id,password,storeName,place,tel) VALUES('".$_POST['Id']."',HEX(AES_ENCRYPT('".$_POST['Password']."', MD5('".$_POST['Password']."'))),'".$_POST['Store_Name']."','".$_POST['Place']."','".$_POST['PhoneNum']."')";
-
+ $sql="INSERT INTO store (id,password,storeName,place,tel,longitude,latitude) VALUES('".$_POST['Id']."',HEX(AES_ENCRYPT('".$_POST['Password']."', MD5('".$_POST['Password']."'))),'".$_POST['Store_Name']."','".$_POST['roadAddress']."','".$_POST['PhoneNum']."',".$memberPointX.",".$memberPointY.")";
    $result=mysqli_query($conn, $sql);
 
-   echo ("<script>alert('회원가입이 완료었습니다.');history.go(-2);</script>");
+   echo ("<script>alert('회원가입이 완료었습니다');location.href=\"Login.php\"</script>");
   exit;
 
 //////////////////////////////////////////회원가입 끝////////////////////////////////////////////////
 
-   header("Location:Login.php");
+//   header("Location:Login.php");
 
 
  ?>

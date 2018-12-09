@@ -9,7 +9,7 @@ require_once("connect.php");
  $orderSerial = $_POST['orderSerial'];
 
  // $bool=TRUE;
- $sql="UPDATE causk.order SET complete=1 WHERE orderSerial='".$orderSerial."'";
+ $sql="UPDATE causk.order SET complete=1, completedTime = date_add(now(), INTERVAL 9 HOUR) WHERE orderSerial='".$orderSerial."'";
 
 $result=mysqli_query($conn, $sql);
 
