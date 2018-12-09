@@ -4,13 +4,9 @@ session_start();
 
 
 $result = mysqli_query($conn,"SELECT*FROM menu WHERE storeSerial = '".$_SESSION['storeSerial']."'");
-// var_dump($result);
-
 $order = mysqli_query($conn,"SELECT*FROM causk.order WHERE storeName = '".$_SESSION['storeName']."' and complete = 0");
 $completed = mysqli_query($conn, "SELECT*FROM causk.order WHERE storeName = '".$_SESSION['storeName']."' and complete = 1 order by completedTime desc");
 $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial = '".$_SESSION['storeSerial']."'");
-// var_dump($sql);
-
 
  ?>
 <!DOCTYPE html>
@@ -25,11 +21,8 @@ $sql = mysqli_query($conn, "SELECT DISTINCT category FROM menu WHERE storeSerial
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" href="dialog.css?v=4">
-    <!--script type="text/javascript" src="firebase-messaging-sw.js"></script-->
-    <!--script type="text/javascript" src="app.js"></script-->
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
     <link rel="manifest" href="manifest.json">
-
 <script>
   // Initialize Firebase
   var config = {
@@ -68,10 +61,7 @@ messaging.requestPermission()
 	}
 	getRegToken();
 
-  //return messaging.getToken();
 })
-//.then(function(token){
-  //console.log(token);
 //})
 .catch(function(err){
   console.log('Error Occured', err);
@@ -239,7 +229,6 @@ messaging.onMessage(function(payLoad){
     <div class="row-md-6" >
         <p style="position:right">
             <a href="#myModal" id="myBtn" data-toggle="modal" data-target="#myModal" style="font-family: 'Do Hyeon', sans-serif; font-size:20px; margin-left: 1060px;" >메뉴 추가</a>
-            <!-- <button type="button" id="myBtn" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">메뉴 추가</button> -->
         </p>
         <!-- Modal -->
         <div id="myModal" class="dialog" tabindex="-1" role="dialog" aria-hidden="true">
@@ -458,10 +447,6 @@ messaging.onMessage(function(payLoad){
                  <div class="form-group text-center">
                    <button type="submit" id="submit" class="btn btn-default" >메뉴 저장</button>
                 </div>
-                <!-- <div class="form-group text-center">
-                  <button type="submit"  class="btn btn-default" >메뉴 저장</button>
-               </div> -->
-
               </div>
             </form>
           </div>

@@ -14,66 +14,6 @@ require_once("connect.php");
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="dialog.css?v=1">
     <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
-    <!--script type="text/javascript" src="app.js"--><!--/script-->
-
-
-
-  <!-- // var {google} = require('googleapis');
-   // var MESSAGING_SCOPE = 'https://www.googleapis.com/auth/firebase.messaging';
-   // var SCOPES = [MESSAGING_SCOPE];
-    //function getAccessToken() {
-       // return new Promise(function(resolve, reject) {
-           // var key = require('./service-account.json');
-           // var jwtClient = new google.auth.JWT(
-             //   key.client_email,
-              //  null,
-              //  key.private_key,
-              //  SCOPES,
-              //  null
-           // );
-           // jwtClient.authorize(function(err, tokens) {
-               // if (err) {
-                 //   reject(err);
-                   // return;
-               // }
-                //resolve(tokens.access_token);
-            //});
-       //});
-   // }
-   // var PROJECT_ID = 'causk-16a1b';
-   // var HOST = 'fcm.googleapis.com';
-    //var PATH = '/v1/projects/' + PROJECT_ID + '/messages:send';
-   // function sendFcmMessage(fcmMessage) {
-    //    getAccessToken().then(function(accessToken) {
-     //       var options = {
-      //          hostname: HOST,
-       //         path: PATH,
-        //        method: 'POST',
-         //       headers: {
-           //         'Authorization': 'Bearer ' + accessToken
-             //   }
-                // … plus the body of your notification or data message
-          //  };
-           // var request = https.request(options, function(resp) {
-             //   resp.setEncoding('utf8');
-               // resp.on('data', function(data) {
-                 //   console.log('Message sent to Firebase for delivery, response:');
-                   // console.log(data);
-               // });
-           // });
-           // request.on('error', function(err) {
-             //   console.log('Unable to send message to Firebase');
-               // console.log(err);
-           // });
-           // request.write(JSON.stringify(fcmMessage));
-           // request.end();
-       // });
-   // }-->
-
-
-
-
-
 
 </head>
 <body>
@@ -113,54 +53,6 @@ require_once("connect.php");
     <div class="section-header">
         <h1 class="section-title wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms" style="font-family: 'Do Hyeon', sans-serif;">로그인 혹은 회원가입을 먼저 해주세요!</h1>
     </div>
-
-        <!-- <table class="table table-bordered"  style="font-family: 'Do Hyeon', sans-serif;">
-            <thead>
-            <tr>
-                <th scope="col">Beverage (HOT/ICED)</th>
-                <th scope="col">R</th>
-                <th scope="col">L</th>
-                <th scope="col">Espresso (HOT/ICED)</th>
-                <th scope="col">R</th>
-                <th scope="col">L</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th scope="row">핫초코</th>
-                <td>4.9</td>
-                <td>5.4</td>
-                <td>플랫화이트</td>
-                <td>4.4</td>
-                <td>0</td>
-            </tr>
-            <tr>
-                <th scope="row">홍차라떼</th>
-                <td>4.9</td>
-                <td>5.4</td>
-                <td>에스프레소</td>
-                <td>3.5</td>
-                <td>4.0</td>
-            </tr>
-            <tr>
-                <th scope="row">녹차라뗴</th>
-                <td>4.9</td>
-                <td>5.4</td>
-                <td>아메리카</td>
-                <td>4.1</td>
-                <td>4.6</td>
-            </tr>
-            <tr>
-                <th scope="row">차이라떼</th>
-                <td>4.9</td>
-                <td>5.4</td>
-                <td>카페라떼</td>
-                <td>4.6</td>
-                <td>5.1</td>
-            </tr>
-            </tbody>
-        </table> -->
-
         <div class="row-md-6" >
             <!-- <p style="position:right">
                 <a href="#myModal" id="myBtn" data-toggle="modal" data-target="#myModal" style="font-family: 'Do Hyeon', sans-serif; font-size:20px; margin-left: 1060px;" >메뉴 수정</a>
