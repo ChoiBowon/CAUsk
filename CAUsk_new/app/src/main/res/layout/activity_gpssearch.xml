@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:text="CAUsk"
+        android:theme="?attr/actionBarTheme" />
+
+
+
+    <Button
+        android:id="@+id/searchGpsbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DCEBFF"
+        android:text="음식점 검색하기"
+        android:textSize="70dp" />
+    <TextView
+        android:id="@+id/searchGpstv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F9FFFF"
+        android:text=" 가까운 음식점 리스트"
+        android:textSize="45dp" />
+
+    <ListView
+        android:id="@+id/listView_main_list_gps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DCEBFF" />
+
+
+    <TextView
+        android:id="@+id/textView_main_result_gps"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+</LinearLayout>

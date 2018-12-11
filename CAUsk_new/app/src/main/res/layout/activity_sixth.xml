@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:text="CAUsk"
+        android:theme="?attr/actionBarTheme" />
+
+    <Button
+        android:id="@+id/telbtn6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DCEBFF"
+        android:text="음식점 전화 버튼"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView6_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView6_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView6_4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView6_5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView6_6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="TextView" />
+
+
+    <ListView
+        android:id="@+id/listView_main_list_6"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+    <TextView
+        android:id="@+id/textView_main_result_6"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="SEND" />
+
+    <ListView
+        android:id="@+id/list_message"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="5dp" />
+
+    <TextView
+        android:id="@+id/tv6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background=" #EBFBFF"
+        android:text=" 주문 확인 화면입니다."
+        android:textSize="40dp"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/button_6th"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:text="버튼 누르면 다음페이지로 이동하고 주문 정보 전송됨"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</LinearLayout>

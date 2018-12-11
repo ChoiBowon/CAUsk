@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:baselineAligned="false"
+android:orientation="vertical"
+tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:text="CAUsk"
+        android:theme="?attr/actionBarTheme" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignTop="@+id/APIImgButton"
+        android:text="intent값전달intent값전달"
+        android:visibility="visible" />
+
+
+    <TextView
+        android:id="@+id/textView2_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="intent값전달intent값전달"
+        android:visibility="visible" />
+
+
+    <Button
+        android:id="@+id/telbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background=" #DCEBFF"
+        android:text="음식점 전화 버튼"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background=" #EBFBFF"
+        android:text=" 대분류 선택 화면입니다. 원하시는 대분류를 눌러주세요."
+        android:textSize="33dp"
+        android:visibility="visible" />
+
+    <ListView
+        android:id="@+id/listView_main_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F9FFFF" />
+
+    <TextView
+        android:id="@+id/textView_main_result"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+
+</LinearLayout>

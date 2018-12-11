@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:text="CAUsk"
+        android:theme="?attr/actionBarTheme" />
+
+    <Button
+        android:id="@+id/GPSbutton"
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        android:background="#DCEBFF"
+        android:text="GPS를 통한 음식점 검색"
+        android:textSize="60dp" />
+
+    <Button
+        android:id="@+id/TTSbutton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="#DCEBFF"
+        android:text="음성 검색을 통한 음식점 검색"
+        android:textSize="55dp" />
+
+
+</LinearLayout>

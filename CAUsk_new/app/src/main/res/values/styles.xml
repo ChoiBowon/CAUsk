@@ -1,0 +1,19 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#5DA4BE</item>    //타이틀바
+        <item name="colorPrimaryDark">#A1CDE1</item>    //상태바
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- 타이틀바 삭ㅈㅔ. -->
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+
+
+    </style>
+
+</resources>
