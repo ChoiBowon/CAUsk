@@ -9,7 +9,7 @@
 #### - PHP 7.2.10-0ubuntu0.18.04.1
 #### - Node.js v8.10.0
 
-## 2. 시각장애인용 어플리케이션
+## 2. 시각장애인용 어플리케이션 - CAUsk_new 
 #### - Android Studio 3.2
 #### - Device API 24
 
